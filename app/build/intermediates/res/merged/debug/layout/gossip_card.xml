@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gossipcard_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0.1dp"
+    android:clickable="true"
+    android:layout_marginTop="3dp"
+    android:layout_marginLeft="2.5dp"
+    android:layout_marginRight="2.5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardCornerRadius="2.5dp"
+    card_view:cardElevation="1.5dp"
+    tools:context=".detail.GossipFragment" >
+    
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+          
+    <RelativeLayout
+        
+        android:id="@+id/CardViewLinearTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+      
+      <TextView
+        android:id="@+id/gossip_card_title"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:layout_marginTop="6.5dp"
+        android:layout_width="match_parent"
+        android:text="\@Company's culture"
+        />
+    
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/CardViewLinearMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CardViewLinearTop"
+        android:layout_alignLeft="@id/CardViewLinearTop"
+        android:orientation="horizontal"
+        >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CardViewLinear"
+        android:layout_marginTop="1.5dp"
+        android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/gossip_card_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2.5dp"
+        android:text="Default Text"
+        android:textColor="@color/IndianRed"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:layout_weight="1"
+        />
+    
+
+    
+    </LinearLayout>
+    
+    
+    </RelativeLayout>
+    
+    <com.shamanland.facebook.likebutton.FacebookLikeButton
+                style="@style/Widget.FacebookLikeButton"
+                android:id="@+id/helpful_like"
+                android:text="Helpful"
+                android:layout_below="@id/CardViewLinearMiddle"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="7dp"
+                app:pagePictureUrl="https://drive.google.com/uc?id=0Bwh0SNLPmjQBS0UteVcwNU1VbjA"
+                app:pageText="This is blog about Android development."
+                app:pageTitle="Developer&apos;s notes"
+                app:optAction="recommend"
+                app:pageUrl="http://blog.shamanland.com/" />
+    
+    </RelativeLayout>
+   
+    
+    </android.support.v7.widget.CardView>

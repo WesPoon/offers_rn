@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+	android:foreground="?android:attr/selectableItemBackground"
+  	>
+  	
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content" >
+
+    <com.offers_rn.uielement.RoundedImageView
+        android:id="@+id/img_thumbnail"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9.5dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:layout_width="55dp"
+        android:layout_height="55dp" />
+
+    <TextView
+        android:id="@+id/message_sender"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/img_thumbnail"
+        android:layout_alignTop="@+id/img_thumbnail"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/message_body"
+        android:layout_below="@+id/message_sender"
+        android:layout_alignLeft="@+id/message_sender"
+        android:layout_marginTop="3dp"
+        />
+    
+    
+    <com.shamanland.facebook.likebutton.FacebookLikeButton
+                style="@style/Widget.FacebookLikeButton"
+                android:id="@+id/live_like"
+                android:text="Live-like"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:elevation="1dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                app:pagePictureUrl="https://drive.google.com/uc?id=0Bwh0SNLPmjQBS0UteVcwNU1VbjA"
+                app:pageText="This is blog about Android development."
+                app:pageTitle="Developer&apos;s notes"
+                app:optAction="recommend"
+                app:pageUrl="http://blog.shamanland.com/" />
+    
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

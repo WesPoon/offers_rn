@@ -1,0 +1,4 @@
+rootProject.name = 'offers_rn'
+
+include ':app', ':like-button', ':lib'
+

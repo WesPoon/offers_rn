@@ -1,0 +1,50 @@
+
+
+<RelativeLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:orientation="vertical"
+    	tools:context="com.offers_rn.chatroom.Chatroom"
+    	>
+
+     
+    
+   	<LinearLayout
+     	   android:id="@+id/input_bar"
+     	   android:layout_width="match_parent"
+     	   android:layout_height="50dp"
+     	   android:weightSum="1"
+     	   android:background ="@color/LightSteelBlue"
+    	   android:layout_alignParentBottom="true"
+    	   android:orientation="horizontal" >
+
+        <EditText
+           android:id="@+id/message_input"
+           android:layout_weight="0.7"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:paddingLeft="5dp"
+           android:inputType="text" />
+
+        <Button
+           android:id="@+id/send_button"
+           android:layout_width="0dp"
+           android:layout_weight="0.3"
+           android:layout_height="match_parent"
+           android:layout_marginTop="1dp"
+           android:text="Discuss!"/>
+
+    </LinearLayout>
+    
+   	<ListView
+       	android:layout_marginTop="5dp"
+      	android:layout_marginBottom="3dp"
+       	android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/input_bar"
+       	android:id="@+id/messages_view"
+        />
+
+</RelativeLayout>

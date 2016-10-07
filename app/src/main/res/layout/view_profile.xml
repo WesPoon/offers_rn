@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+ 
+ <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="2dp"
+    tools:context=".InternListActivity"
+    >
+ 
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical" >
+     
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/viewProfile_uIcon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/viewProfile_university"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="University"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+        
+     <ImageView
+     android:id="@+id/viewProfile_userIcon"
+     android:layout_width="60dp"
+     android:layout_height="60dp"
+     android:layout_marginTop="5dp"
+     android:layout_marginLeft="5dp"
+     android:src="@drawable/ic_launcher"/>
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:orientation="vertical" >
+
+         <TextView
+             android:id="@+id/viewProfile_userName"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="User Name"
+             android:layout_marginLeft="4dp"  
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+         <TextView
+             android:id="@+id/viewProfile_major"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="1dp"             
+             android:layout_marginLeft="8dp"   
+             android:text="Major" />
+
+         <TextView
+             android:id="@+id/viewProfile_gpa"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="8dp"
+             android:text="GPA"           
+             android:textAppearance="?android:attr/textAppearanceSmall" />
+
+     </LinearLayout>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/viewProfile_IndustryTitle1"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Industry 1 :"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/viewProfile_industry1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="industry1"
+            android:layout_marginLeft="10dp"            
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/viewProfile_IndustryTitle2"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Industry 2 :"
+            android:layout_marginLeft="10dp"            
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/viewProfile_industry2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="industry2"
+            android:layout_marginLeft="10dp"            
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/viewProfile_careerStyleTitle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Career style :"
+            android:layout_marginLeft="10dp"            
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/viewProfile_careerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="careerStyle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"            
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+      
+    </LinearLayout>
+  </LinearLayout>
+ </android.support.v7.widget.CardView>
+ 
+  	<Button
+        android:id="@+id/viewProfile_reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="right|center_vertical"
+        android:text="Reset profile" />
+	    
+</LinearLayout>

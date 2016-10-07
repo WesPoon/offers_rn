@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="false"
+    >
+    
+    <ImageView
+                android:id="@+id/offer_detail_banner"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg" />
+    
+    
+
+     <include
+                android:id="@+id/offer_detial_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/offer_detail_banner"
+                layout="@layout/offer_card" />
+     
+     <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:id="@+id/detail_tab_layout"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:layout_below="@id/offer_detial_card"
+            app:tabBackground="@color/AliceBlue"
+            />
+      
+	    <RelativeLayout android:layout_width="match_parent"
+                      	android:layout_height="fill_parent"
+                      	android:layout_below="@id/detail_tab_layout" 
+                      	android:orientation="vertical">
+	    
+	        
+	        <LinearLayout
+	    		android:id="@+id/buttom_bar"
+	    		android:layout_width="match_parent"
+	    		android:layout_alignParentBottom="true"
+	    		android:layout_marginTop="1dp"
+	    		android:layout_height = "85dp"
+        		android:orientation="vertical"
+	    		>
+	    
+	    	<LinearLayout
+	        	android:id="@+id/spinner_bar"
+	        	android:layout_width="match_parent"
+	        	android:layout_height="30dp"
+	        	android:layout_marginTop="5dp"
+	        	android:weightSum="2"
+	        	android:orientation="horizontal"
+	        	>
+	        
+	        <Spinner
+              	android:id="@+id/GossipSpinner"
+              	android:layout_width="0dp"
+              	android:background ="@color/LightGrey"
+              	android:layout_marginLeft="2dp"
+              	android:layout_marginRight="2dp"
+              	android:elevation="3dp"
+              	android:paddingTop="2dp"
+              	android:layout_height="match_parent"
+              	android:layout_weight="1"
+               	/>
+	        
+	        <Spinner
+              	android:id="@+id/GossipSpinner2"
+              	android:layout_width="0dp"
+              	android:layout_marginLeft="2dp"
+              	android:layout_marginRight="2dp"
+              	android:background ="@color/PowderBlue"
+              	android:paddingTop="2dp"
+              	android:layout_height="match_parent"
+              	android:layout_weight="1"
+               	/>
+	        
+	    	</LinearLayout>
+	    
+	    <LinearLayout
+	        android:id="@+id/dialogue_bar"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        >
+	       
+	       <EditText
+           android:id="@+id/chat_text"
+           android:layout_width="0dp"
+           android:layout_height="40dp"
+           android:layout_weight="1"
+           android:layout_marginLeft="6dip"
+           android:layout_marginRight="6dip"
+           android:layout_marginTop="2dip"
+           android:paddingLeft="5dip"
+           android:paddingRight="5dip"
+           android:paddingTop="1.5dp"
+           android:paddingBottom="0.5dp"
+           android:background="@drawable/edittextstyle"
+           android:hint="    Let's Gossip !"
+           android:fontFamily="sans-serif-light"
+           android:inputType="textMultiLine"
+           android:minLines="1"
+           android:maxLines="4"
+           />
+
+    <android.support.design.widget.FloatingActionButton
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dip"
+        android:layout_marginBottom="2dip"
+        android:paddingBottom="3dip"
+        app:fabSize="mini"
+        app:borderWidth="16dp"
+        android:src="@drawable/ic_backup_white_48dp"
+        app:backgroundTint="@color/SkyBlue"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@color/White"
+        android:clickable="true"
+        app:elevation="2.5dp"
+         />
+    
+        		</LinearLayout>
+
+			</LinearLayout>
+     
+            <android.support.v4.view.ViewPager
+        		android:id="@+id/detail_tab_viewpager"
+        		android:layout_width="match_parent"
+        		android:layout_above="@id/buttom_bar"
+        		android:layout_height="fill_parent"
+        		app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    
+			
+		</RelativeLayout>
+</RelativeLayout>

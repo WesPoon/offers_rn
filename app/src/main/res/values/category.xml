@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_main_setup">Setup</string>
+    <string name="category_internship">Internship</string>
+    <string name="category_exchange">Exchange</string>
+    <string name="category_grad_jobs">Grad. Jobs</string>
+
+    <string-array name="category_array">
+        <item>@string/menu_main_setup</item>
+        <item>@string/category_internship</item>
+        <item>@string/category_exchange</item>
+        <item>@string/category_grad_jobs</item>
+    </string-array>
+</resources>

@@ -1,0 +1,22 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:enterFadeDuration="150"
+    android:exitFadeDuration="150" >
+
+    <item android:state_pressed="true">
+        android:foreground="@color/Seashell"
+    </item>
+    
+    <item android:state_focused="true" android:state_enabled="true">
+        android:foreground="@color/Seashell"
+        
+     </item>  
+    <item android:state_enabled="true">
+        android:foreground="@android:color/white"
+    </item>
+    <item android:state_enabled="false">
+        android:foreground="@android:color/white"
+    </item>
+    
+</selector>

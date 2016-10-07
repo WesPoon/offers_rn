@@ -1,0 +1,97 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.offers_rn.MainActivity"
+    >
+    
+    <android.support.v4.view.ViewPager 
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.offers_rn.MainActivity" />
+    
+    <RelativeLayout 
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        >
+        
+        
+        
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:id="@+id/drawerPane"
+        android:layout_gravity="start">
+ 
+        <!-- Profile Box -->
+ 
+       <RelativeLayout
+            android:id="@+id/profileBox"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/material_scrollgallery_gradient"
+            android:clickable="true"
+            android:padding="8dp" >
+ 
+          
+            
+       <com.offers_rn.uielement.RoundedImageView
+        android:id="@+id/avatar"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/graduate_jobs"
+         />
+ 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/avatar"
+                android:orientation="vertical" >
+ 
+                <com.offers_rn.uielement.CustomFontTextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wes Poon"
+                    android:textColor="@color/DarkSlateGray"
+                    android:textSize="16sp"
+                    app:customFont="chris_hand"
+                     />
+ 
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="4dp"
+                    android:text="View Profile"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+ 
+        <!-- List of Actions (pages) -->
+        <ListView
+            android:id="@+id/navList"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/profileBox"
+            android:choiceMode="singleChoice"
+            android:background="#ffffffff" />
+ 
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

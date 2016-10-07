@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="profile_industry_IT">IT</string>
+    <string name="profile_industry_Finance">Finance</string>
+    <string name="profile_industry_Engineering">Engineering</string>
+    <string name="profile_industry_Ibank">Investment Banking</string>
+    <string name="profile_industry_Telecommunication">Telecommunication</string>
+    <string name="profile_industry_Retail">Retail</string>
+    <string name="profile_industry_CivilService">Civil Service</string>
+    
+    <string-array name="industry_array">
+        <item>@string/profile_industry_IT</item>
+        <item>@string/profile_industry_Finance</item>
+        <item>@string/profile_industry_Engineering</item>
+        <item>@string/profile_industry_Ibank</item>
+        <item>@string/profile_industry_Telecommunication</item>
+        <item>@string/profile_industry_Retail</item>
+        <item>@string/profile_industry_CivilService</item>
+    </string-array>
+
+
+</resources>

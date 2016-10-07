@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardBackgroundColor="@android:color/white"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="2.5dp"
+    card_view:cardElevation="1.2dp"
+    card_view:cardUseCompatPadding="true"
+     >
+    
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/offer_card_icon_container"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            >
+
+            <ImageView
+                android:id="@+id/offer_card_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/White"
+                android:scaleType="centerCrop"
+                android:padding="10dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/hello_world"
+
+                />
+
+            <com.bhargavms.dotloader.DotLoader
+                android:id="@+id/offer_card_dotloader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                card_view:color_array="@array/dot_colors"
+                android:padding="20dp"
+                card_view:dot_radius="3.5dp"
+                card_view:number_of_dots="3"/>
+
+        </RelativeLayout>
+      
+
+    
+    
+    <RelativeLayout
+        
+        android:id="@+id/CardViewLinearTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/offer_card_icon_container"
+        android:layout_alignTop="@id/offer_card_icon_container"
+        android:layout_marginLeft="8dp"
+        android:orientation="horizontal">
+
+      
+      
+      <ImageButton
+          android:id="@+id/cardview_savebutton"
+          android:layout_alignParentRight="true"
+          android:layout_height="25dp"
+          android:layout_width="25dp"
+          android:layout_marginTop="7dp"
+          android:layout_marginRight="2dp"
+          android:background="@drawable/cardview_savebutton"
+          />
+      
+      <TextView
+        android:id="@+id/offer_card_title"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@id/cardview_savebutton"
+        />
+    
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CardViewLinearTop"
+        android:layout_alignLeft="@id/CardViewLinearTop"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CardViewLinear"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/offer_card_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Surname"
+        android:textStyle="bold"
+        android:textColor="@color/IndianRed"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save and Reviews"
+        android:textColor="@color/IndianRed"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:layout_toRightOf="@id/offer_card_context"
+        android:layout_alignBaseline="@id/offer_card_context"
+        android:layout_weight="1"
+         />
+    
+    </LinearLayout>
+    
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CardViewLinear2"
+        android:layout_below="@id/CardViewLinear"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/offer_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View"
+        android:textStyle="bold"
+        android:textColor="@color/IndianRed"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:id="@+id/offer_card_deadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deadline"
+        android:textStyle="bold"
+        android:textColor="@color/IndianRed"
+        android:textSize="13sp"
+        android:layout_toRightOf="@id/offer_card_context"
+        android:layout_alignBaseline="@id/offer_card_context"
+        android:layout_weight="1"
+         />
+    
+    </LinearLayout>
+    
+<!--    <ImageButton
+          android:id="@+id/cardview_blacklist"
+          android:layout_alignParentRight="true"
+          android:layout_height="25dp"
+          android:layout_width="25dp"
+          android:layout_marginTop="7dp"
+          android:layout_marginRight="2dp"
+          android:background="@drawable/blacklist_button2"
+          />   -->
+    
+    
+    
+    </RelativeLayout>
+    
+    </RelativeLayout>
+   
+    
+    </android.support.v7.widget.CardView>

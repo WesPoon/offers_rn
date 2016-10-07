@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="profile_career_style_central_ppl">Central People</string>
+    <string name="profile_career_style_stable_ppl">Stable People</string>
+    <string name="profile_career_style_creative">Creative People</string>
+	<string name="profile_career_style_technical">Technical Specialist</string>
+	<string name="profile_career_style_management_trainee">Management Trainee</string>
+	<string name="profile_career_style_graduate_trainee">Graduate Trainee</string>
+	<string name="profile_career_style_undefined">undefined</string>    
+    <string-array name="career_style_array">
+        <item>@string/profile_career_style_central_ppl</item>
+        <item>@string/profile_career_style_stable_ppl</item>
+        <item>@string/profile_career_style_creative</item>
+        <item>@string/profile_career_style_technical</item>
+        <item>@string/profile_career_style_undefined</item>
+        <item>@string/profile_career_style_management_trainee</item>
+        <item>@string/profile_career_style_graduate_trainee</item>
+    </string-array>
+</resources>

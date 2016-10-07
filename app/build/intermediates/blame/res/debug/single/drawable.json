@@ -1,0 +1,378 @@
+[
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\advert.jpg",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\advert.jpg"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_1.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\icon_1.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\share_240.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\share_240.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ab_background_textured_example.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\ab_background_textured_example.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_action_search.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\ic_action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selectable_background_example.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\selectable_background_example.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cardview_savedtick.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\cardview_savedtick.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chatroom.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\chatroom.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\intern.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\intern.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tab_indicator_ab_example.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\tab_indicator_ab_example.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\white_background.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\white_background.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_selectall_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_selectall_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_off_mtrl.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_radio_off_mtrl.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\blacklist_button.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\blacklist_button.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_ground.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\button_ground.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg.jpg",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\bg.jpg"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\apptheme_edit_text_holo_light.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\apptheme_edit_text_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ust.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\ust.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_checkbox_checked_mtrl.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_checkbox_checked_mtrl.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittextstyle.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\edittextstyle.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\graduate_jobs.jpg",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\graduate_jobs.jpg"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\share_480.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\share_480.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_cab_done_example.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\btn_cab_done_example.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cuhk.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\cuhk.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_send_grey.jpg",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\ic_send_grey.jpg"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_cut_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_cut_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\forelite.jpg",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\forelite.jpg"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\live_like.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\live_like.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_done.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\ic_done.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_message.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\star_message.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\youcaremost.jpg",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\youcaremost.jpg"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\badjob.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\badjob.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittextstyle2.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\edittextstyle2.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\setup.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\setup.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_paste_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_paste_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\blacklist_button2.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\blacklist_button2.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\openu.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\openu.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_copy_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_copy_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.2.0\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\helpful1.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\helpful1.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hku.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\hku.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_send_grey_2.jpg",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\ic_send_grey_2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_checkbox_unchecked_mtrl.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_checkbox_unchecked_mtrl.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\polyu.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\polyu.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spinner_background_ab_example.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\spinner_background_ab_example.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_share_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_share_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\levelup.jpg",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\levelup.jpg"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_backup_white_48dp.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\ic_backup_white_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bu.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\bu.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hand_icon_small.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\hand_icon_small.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rsz_star_message.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\rsz_star_message.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bu_button.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\bu_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\material_scrollgallery_gradient.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\material_scrollgallery_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\strangecompany.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\strangecompany.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher1.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\ic_launcher1.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cityu.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\cityu.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cardview_savebutton.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\cardview_savebutton.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cuhk_splashpage.jpg",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\cuhk_splashpage.jpg"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\progress_horizontal_example.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\progress_horizontal_example.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_on_mtrl.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_btn_radio_on_mtrl.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_shamanland_facebook_button_blue.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\offers_rn\\lib\\unspecified\\res\\drawable\\com_shamanland_facebook_button_blue.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\lu.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\lu.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    }
+]

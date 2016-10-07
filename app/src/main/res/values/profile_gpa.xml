@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="profile_gpa_above_3_5">GPA&lt;3.5</string>
+    <string name="profile_gpa_above_3">3&lt;GPA&lt;3.5</string>
+    <string name="profile_gpa_below_3">3.5&lt;GPA</string>
+    <string name="profile_gpa_classified">Classified</string>
+
+    <string-array name="gpa_array">
+        <item>@string/profile_gpa_above_3_5</item>
+        <item>@string/profile_gpa_above_3</item>
+        <item>@string/profile_gpa_below_3</item>
+        <item>@string/profile_gpa_classified</item>
+    </string-array>
+
+</resources>

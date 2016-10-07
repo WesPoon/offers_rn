@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gossip_tag_company">\@Company</string>
+    <string name="gossip_tag_offer">\@Offer</string>
+    
+    <string name="gossip_criteria_duty">\@Duty</string>
+    <string name="gossip_criteria_combined">\@Combined</string>
+    <string name="gossip_criteria_salary">\@Salary</string>
+    <string name="gossip_criteria_interview">\@Interview</string>
+    <string name="gossip_criteria_askQ">\@Ask Q</string>
+    <string name="gossip_criteria_perspective">\@Perspective</string>
+
+    <string-array name="gossip_tag_array">
+        <item>@string/gossip_tag_company</item>
+        <item>@string/gossip_tag_offer</item>
+    </string-array>
+    
+    <string-array name="gossip_criteria_array">
+        <item>@string/gossip_criteria_duty</item>
+        <item>@string/gossip_criteria_combined</item>
+        <item>@string/gossip_criteria_salary</item>
+        <item>@string/gossip_criteria_interview</item>
+        <item>@string/gossip_criteria_askQ</item>
+        <item>@string/gossip_criteria_perspective</item>
+    </string-array>
+
+</resources>

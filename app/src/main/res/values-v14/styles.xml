@@ -1,0 +1,91 @@
+<resources >
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!-- API 14 theme customizations can go here. -->
+        
+       <item name="android:actionBarStyle">@style/MyActionBar</item>
+       <item name="android:actionBarSize">20dip</item>
+       
+       
+    </style>
+    
+    <style name="Theme.Example" parent="@style/Theme.AppCompat.Light">
+        
+        <item name="actionBarItemBackground">@drawable/selectable_background_example</item>
+        <item name="android:actionBarItemBackground" ignore="NewApi">@drawable/selectable_background_example</item>
+        
+        <item name="android:popupMenuStyle">@style/PopupMenu.Example</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Example</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Example</item>
+        <item name="android:actionBarTabStyle" ignore="NewApi">@style/ActionBarTabStyle.Example</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Example</item>
+        <item name="android:actionDropDownStyle" ignore="NewApi">@style/DropDownNav.Example</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Example</item>
+        <item name="android:actionBarStyle" ignore="NewApi">@style/ActionBar.Solid.Example</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_example</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_example</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Example</item>
+        
+        <item name="android:actionBarSize">40dp</item>
+        <item name="actionBarSize"  ignore="NewApi">40dp</item>
+        
+        
+        <item name="android:actionBarTabTextStyle">@style/ActionBarTabTextStyle.Tabtheme</item>
+        <item name="actionBarTabTextStyle">@style/ActionBarTabTextStyle.Tabtheme</item>
+        
+
+
+
+        
+    </style>
+
+    <style name="ActionBar.Solid.Example" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="background">@drawable/ab_solid_example</item>
+        <item name="android:background" ignore="NewApi">@drawable/ab_solid_example</item>
+        
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_example</item>
+        <item name="android:backgroundStacked"  ignore="NewApi">@drawable/ab_stacked_solid_example</item>
+        
+        
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        
+        
+        
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_example</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Example</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Example" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_example</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Example</item>
+    </style>
+    
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Example.Widget" parent="@style/Theme.AppCompat">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Example</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Example</item>
+    </style>
+    
+    
+    <!-- this stype is for tabhost -->
+    
+
+    <style name="CustomTabWidget" parent="@android:style/Widget.TabWidget">
+    <item name="android:textAppearance">@style/CustomTabWidgetText</item>
+    <item name="android:maxHeight">20dip</item>
+    </style>
+    <style name="CustomTabWidgetText" 
+    parent="@android:style/TextAppearance.Widget.TabWidget">
+    <item name="android:textSize">10sp</item>
+
+    </style>
+    
+   
+
+</resources>

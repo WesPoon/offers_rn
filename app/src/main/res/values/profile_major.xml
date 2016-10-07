@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="profile_major_Engineering">Engineering</string>
+    <string name="profile_major_BBA">BBA</string>
+    <string name="profile_major_Journalism">Journalism</string>
+    <string name="profile_major_Accounting">Accounting</string>
+    <string name="profile_major_ComputerScience">Computer Science</string>
+
+    <string-array name="major_array">
+        <item>@string/profile_major_Engineering</item>
+        <item>@string/profile_major_BBA</item>
+        <item>@string/profile_major_Journalism</item>
+        <item>@string/profile_major_ComputerScience</item>
+    </string-array>
+
+</resources>

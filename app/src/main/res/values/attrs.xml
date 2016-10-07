@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="NamedButton">
+    <attr name="name" format="string" />
+  </declare-styleable>
+  <declare-styleable name="ChooseIndustrySpinner">
+    <attr name="index" format="integer" />
+  </declare-styleable>
+  <declare-styleable name="AnimateCheckBox">
+        <attr name="unCheckColor" format="color"/>
+        <attr name="checkedColor" format="color"/>
+        <attr name="lineColor" format="color"/>
+        <attr name="lineWidth" format="dimension"/>
+        <attr name="animDuration" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomFontTextView">
+        <attr name="customFont" format="string"/>
+    </declare-styleable>
+  
+</resources>

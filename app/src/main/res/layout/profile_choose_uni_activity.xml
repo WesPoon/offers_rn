@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:profile="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_profile_choose_uni"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.ChooseUniActivity"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="4" >
+
+            <com.offers_rn.profile.ChooseUniButton
+                android:id="@+id/profile_choose_uni_cuhk"
+                profile:name="CUHK"
+                android:src="@drawable/cuhk"
+                
+                android:background="@drawable/button_ground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                
+                android:contentDescription="/"
+                 />
+
+            <com.offers_rn.profile.ChooseUniButton              
+                android:id="@+id/profile_choose_uni_hku"
+                profile:name="HKU"
+                android:src="@drawable/hku"
+                
+                android:background="@drawable/button_ground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                
+                android:contentDescription="/"
+                />
+
+            <com.offers_rn.profile.ChooseUniButton
+                android:id="@+id/profile_choose_uni_cityu"
+                profile:name="CityU"
+                android:src="@drawable/cityu"
+                
+                android:background="@drawable/button_ground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                
+                android:contentDescription="/"
+                />
+
+            <com.offers_rn.profile.ChooseUniButton               
+                android:id="@+id/profile_choose_uni_ust"
+                profile:name="UST"
+                android:src="@drawable/ust"
+                
+                android:background="@drawable/button_ground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                
+                android:contentDescription="/"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="4" >
+
+            <com.offers_rn.profile.ChooseUniButton                
+                android:id="@+id/profile_choose_uni_bu"
+                profile:name="BU"
+                
+                android:background="@drawable/button_ground"
+                android:src="@drawable/bu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                
+                android:contentDescription="/"
+                />
+
+            <com.offers_rn.profile.ChooseUniButton
+                android:id="@+id/profile_choose_uni_lu"
+                profile:name="LU"
+                android:src="@drawable/lu"
+                
+                android:background="@drawable/button_ground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                
+                android:contentDescription="/"
+                />
+
+            <com.offers_rn.profile.ChooseUniButton                
+                android:id="@+id/profile_choose_uni_polyu"
+                profile:name="PolyU"
+                android:src="@drawable/polyu"
+                
+                android:background="@drawable/button_ground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                
+                android:contentDescription="/"
+                />
+
+            <com.offers_rn.profile.ChooseUniButton
+                android:id="@+id/profile_choose_uni_openu"
+                profile:name="OpenU"
+                android:src="@drawable/openu"
+                
+                android:background="@drawable/button_ground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="13dp"
+                android:scaleType="fitCenter"
+                
+                android:contentDescription="/"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

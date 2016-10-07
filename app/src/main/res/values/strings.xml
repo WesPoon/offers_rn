@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OFFERS</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="save_list">Save List</string>
+    <string name="black_list">Black List</string>
+    <string name="email_list">Email to myself</string>
+    <string name="starred_messages">Starred Messages</string>
+    
+    <string name="drawer_opened">Drawer Opened</string>
+    <string name="drawer_closed">Drawer Closed</string>
+
+
+    <string name="form_submit">Submit</string>
+
+    <string name="profile_choose_major_context">Please choose your Major Subject:</string>
+    <string name="profile_choose_gpa_context">Please select one: </string>
+    <string name="profile_choose_industries_context">Please choose following two as your Industries:</string>
+    <string name="profile_choose_career_style_context">Please choose following one as your career style:</string> 
+    
+    <string name="profile_page1_username">Your User Name:)</string>
+    <string name="profile_page1_username_hint">Maximum 12 characters</string>
+    <string name="profile_page1_disclaimer">we are an independent organisation that is not affiuated with any other association. The company trademarks displayed on our webiste does not suggest any form of sponsorship and afficiation with the companies.</string>
+    <string name="profile_page1_intro">OFFERS is an apps to replace the stupid and messy CUHK mass mail system and Career Website. We aim at encouraging concise information exchange with high transperancy\n\nYOU ARE NOW HIGHLY ENCOURAGED TO REGISTER WITH A RANDOM USERNAME WHICH CAN HIDE YOUR REAL IDENTITY</string>
+    
+    <string name="offer_detail_title">Title1</string>
+    <string name="offer_detail_deadline_context">Deadline</string>
+    <string name="offer_detail_gossip">Join Gossip!</string>
+    <string name="offer_detail_save">Save!</string>
+    <string name="action_search">Search</string>
+</resources>

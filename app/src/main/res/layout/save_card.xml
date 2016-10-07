@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/savecard_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0.1dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardBackgroundColor="@android:color/white"
+    card_view:cardCornerRadius="1.5dp"
+    card_view:cardElevation="0.5dp"
+    tools:context=".menulist.Blacklist" >
+    
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+      
+        
+    <com.offers_rn.uielement.RoundedImageView
+        android:id="@+id/savelist_floatbutton"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/graduate_jobs"
+        android:layout_marginBottom="10dp"
+        app:fabSize="normal"
+        app:borderWidth="0dp"
+         />
+          
+    <RelativeLayout
+        
+        android:id="@+id/CardViewLinearTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/savelist_floatbutton"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+      
+      <TextView
+        android:id="@+id/offer_card_title"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="17sp"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:text="Card Title"
+        />
+    
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CardViewLinearTop"
+        android:layout_alignLeft="@id/CardViewLinearTop"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal"
+        >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CardViewLinear"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/offer_card_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Surname"
+        android:textStyle="bold"
+        android:textColor="@color/IndianRed"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        android:layout_weight="1"
+        />
+    
+    <TextView
+        android:id="@+id/offer_card_deadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deadline"
+        android:textStyle="bold"
+        android:textColor="@color/IndianRed"
+        android:textSize="13sp"
+        android:layout_toRightOf="@id/offer_card_context"
+        android:layout_alignBaseline="@id/offer_card_context"
+        android:layout_weight="1"
+         />
+    
+    </LinearLayout>
+    
+    
+    </RelativeLayout>
+    
+    </RelativeLayout>
+   
+    
+    </android.support.v7.widget.CardView>

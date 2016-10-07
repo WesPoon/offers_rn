@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:fitsSystemWindows="true">
+    
+   <ScrollView 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      
+      >
+    
+    <TextView
+        android:id="@+id/job_description"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-light"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="12dp"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:text="Job description"
+        />
+        <!-- everything you already have -->
+</ScrollView>
+    
+      <android.support.design.widget.FloatingActionButton
+          android:id="@+id/fab2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="end|bottom"
+          android:layout_marginBottom="22dp"
+          android:layout_marginRight="18dp"
+          android:clickable="true"
+          android:scaleType="fitCenter"
+          android:src="@drawable/share_240"
+          app:backgroundTint="@color/LightSkyBlue"
+          app:elevation="6dp"
+          app:fabSize="normal"
+          app:pressedTranslationZ="12dp"
+          app:rippleColor="@color/White" />
+ 
+</FrameLayout>
