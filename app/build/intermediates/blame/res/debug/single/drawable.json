@@ -52,12 +52,12 @@
         "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\selectable_background_example.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cardview_savedtick.png",
-        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\cardview_savedtick.png"
-    },
-    {
         "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\chatroom.png",
         "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\chatroom.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cardview_savedtick.png",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\drawable\\cardview_savedtick.png"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\intern.png",

@@ -49,7 +49,7 @@ public class MainApplication extends Application implements ReactApplication {
   static public DBHelper mydb;
 
   public static String tempjd;
-
+//hi
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
     protected boolean getUseDeveloperSupport() {
@@ -91,7 +91,12 @@ public class MainApplication extends Application implements ReactApplication {
 
     ParseObject.registerSubclass(Message.class);
     //Parse.initialize(this, getString(R.string.parse_app_id), getString(R.string.parse_client_id));
-    Parse.initialize(this, appsid, clientid);
+    //Parse.initialize(this, appsid, clientid);
+    Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
+            .applicationId(appsid)
+            .clientKey("")
+            .server("http://54.65.1.149:1337/parse/")   // '/' important after 'parse'
+            .build());
 
     if(ParseInstallation.getCurrentInstallation()==null){
       ParseInstallation.getCurrentInstallation().saveInBackground();
