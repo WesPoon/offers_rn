@@ -173,7 +173,7 @@ public class Singleton {
           
             }
 
-    		if(Singleton.getInstance().getCompListCount()>0)
+    		if(Singleton.getInstance().getCompListCount()>=0)
     		CompetitionQueryDone = true;
     		else
     			CompetitionQuery();
@@ -239,7 +239,7 @@ public class Singleton {
                   
               }
 
-      		if(Singleton.getInstance().getInternListCount()>0)
+      		if(Singleton.getInstance().getInternListCount()>=0)
       			InternQueryDone = true;
       		else
       			InternJobQuery();
@@ -295,7 +295,7 @@ public class Singleton {
             }
 
     		Log.d("RETURN", "Exchanges, size of array"+Integer.toString(Singleton.getInstance().getExchangeListCount()));
-    		if(Singleton.getInstance().getExchangeListCount()>0)
+    		if(Singleton.getInstance().getExchangeListCount()>=0)
     		ExchangeQueryDone = true;
     		else
     			ExchangeQuery();
@@ -356,7 +356,7 @@ public class Singleton {
              }
 
      		Log.d("RETURN", "GradJobs, size of array"+Integer.toString(Singleton.getInstance().getGradListCount()));
-     		if(Singleton.getInstance().getGradListCount()>0)
+     		if(Singleton.getInstance().getGradListCount()>=0)
      		GradJobQueryDone = true;
      		else
      			GradJobQuery();

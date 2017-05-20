@@ -90,6 +90,7 @@ public class SplashScreen extends Activity {
                 				}
                 			}
                 		}
+						break;
                 	}
                 	
                 	Log.d("Test","0");
@@ -216,7 +217,7 @@ public class SplashScreen extends Activity {
                }
 
        		Log.d("RETURN", "InternJobs, size of array"+Integer.toString(Singleton.getInstance().getInternListCount()));
-       		if(Singleton.getInstance().getInternListCount()>0)
+       		if(Singleton.getInstance().getInternListCount()>=0)
        		InternQueryDone = true;
        		else
        			InternJobQuery();
@@ -275,7 +276,7 @@ public class SplashScreen extends Activity {
               }
 
       		Log.d("RETURN", "GradJobs, size of array"+Integer.toString(Singleton.getInstance().getGradListCount()));
-      		if(Singleton.getInstance().getGradListCount()>0)
+      		if(Singleton.getInstance().getGradListCount()>=0)
       		GradJobQueryDone = true;
       		else
       			GradJobQuery();
@@ -339,7 +340,7 @@ public class SplashScreen extends Activity {
              }
 
      		Log.d("RETURN", "Exchanges, size of array"+Integer.toString(Singleton.getInstance().getExchangeListCount()));
-     		if(Singleton.getInstance().getExchangeListCount()>0)
+     		if(Singleton.getInstance().getExchangeListCount()>=0)
      		ExchangeQueryDone = true;
      		else
      			ExchangeQuery();
@@ -402,7 +403,7 @@ public class SplashScreen extends Activity {
             }
 
     		Log.d("RETURN", "Comp, size of array"+Integer.toString(Singleton.getInstance().getCompListCount()));
-    		if(Singleton.getInstance().getCompListCount()>0)
+    		if(Singleton.getInstance().getCompListCount()>=0)
     		CompetitionQueryDone = true;
     		else
     			CompetitionQuery();

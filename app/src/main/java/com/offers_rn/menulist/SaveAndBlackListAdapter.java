@@ -5,8 +5,12 @@ import java.util.List;
 
 import com.offers_rn.MainApplication;
 import com.offers_rn.R;
+import com.offers_rn.offers.InternDetailActivity;
 import com.offers_rn.parseobject.Jobs;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -79,6 +83,20 @@ public class SaveAndBlackListAdapter extends RecyclerView.Adapter<SaveAndBlackLi
 			          return true;
 			        }
 			      });
+
+		saveView.itemView.setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View v) {
+						Intent intent = new Intent((Context) v.getContext(), InternDetailActivity.class);
+						intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
+						intent.putExtra("JobObjectID", card.getObjectId());
+						intent.putExtra("Company",card.getCompany());
+						intent.putExtra("JobTitle",card.getJobTitle());
+						intent.putExtra("Deadline", card.getDeadline());
+						((Activity) v.getContext()).startActivity(intent);
+					}
+				 });
 		
 		saveView.itemView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
 			
