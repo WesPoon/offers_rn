@@ -18,6 +18,8 @@ public class Jobs extends ParseObject implements Comparable{
 	private String company;
 	private String JT;
     private String type;
+	private String App_Link;
+
 
 	// @MHK: getString(String KEY) key in the parse backend, please remember to
 	// @ParseClassName("Jobs")
@@ -30,6 +32,7 @@ public class Jobs extends ParseObject implements Comparable{
 		this.setObjectId(demo.getObjectId());
 		this.setDeadline(demo.getDeadline());
 		this.setViewCount(demo.getViewCount());
+		this.setApplicationLink(demo.getApplicationLink());
 		return this;
 	}
 	
@@ -146,6 +149,22 @@ public class Jobs extends ParseObject implements Comparable{
 		
 		this.type=type;
 		
+	}
+
+	public String getType(){
+		return this.type;
+	}
+
+	public String getApplicationLink(){
+
+		if(getString("App_Link")!=null){
+			return getString("App_Link");	}
+		else return "Sorry for missing information. OFFERS Team would provide it ASAP" ;
+	}
+
+	public void setApplicationLink(String link){
+		put("App_Link", link);
+		this.App_Link = link;
 	}
 	
 	public boolean isSaved(){

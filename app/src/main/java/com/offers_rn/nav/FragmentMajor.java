@@ -39,7 +39,7 @@ public class FragmentMajor extends Fragment implements OnTabChangeListener,OnPag
 	private TabHost tabHost;
 	private ViewPager viewPager;
 	private MyFragmentPagerAdapter myViewPagerAdapter;
-	private String[] tabname = {"MT&GT", "Govern","Normal"};
+	private String[] tabname = {"MT", "GT"};
 	int i = 0;
 	View v;
 	public static ActionBar actionBar;
@@ -110,7 +110,7 @@ public class FragmentMajor extends Fragment implements OnTabChangeListener,OnPag
 
 		tabHost.setup();
 
-		for (int i = 1; i <= 3; i++) {
+		for (int i = 1; i <= 2; i++) {
 
 			TabHost.TabSpec tabSpec;
 			tabSpec = tabHost.newTabSpec("Tab" + i);
@@ -131,10 +131,9 @@ public class FragmentMajor extends Fragment implements OnTabChangeListener,OnPag
 	private void initializeViewPager() {
 		List<Fragment> fragments = new Vector<Fragment>();
 		
-		fragments.add(CommonFragment.newInstance(actionBar,Constants.gradjob));
-		fragments.add(CommonFragment.newInstance(actionBar,Constants.gradjob));
-		fragments.add(CommonFragment.newInstance(actionBar,Constants.competition));
-		
+		fragments.add(CommonFragment.newInstance(actionBar,Constants.MT));
+		fragments.add(CommonFragment.newInstance(actionBar,Constants.GT));
+
 
 		this.myViewPagerAdapter = new MyFragmentPagerAdapter(getChildFragmentManager(), fragments);		
 		this.viewPager = (ViewPager) v.findViewById(R.id.tab_viewPager);

@@ -25,7 +25,8 @@ public class DBHelper extends SQLiteOpenHelper {
 	public static final String OFFERS_DEADLINE = "Deadline";
 	public static final String OFFERS_COMPANY = "Company";
 	public static final String OFFERS_JOB_TITLE = "JobTitle";
-	
+	public static final String OFFERS_APP_LINK = "App_Link";
+
 	public static final String STAR_STRING ="Star_string";
 	public static final String STAR_CLASS="Star_class";
 	public static final String STAR_TIMESTAMP = "timestamp";
@@ -40,6 +41,7 @@ public class DBHelper extends SQLiteOpenHelper {
             KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             OFFERS_TYPE + " TEXT NOT NULL, " +
             OFFERS_OBJECTID + " TEXT NOT NULL, " +
+			OFFERS_APP_LINK + " TEXT NOT NULL,"+
             OFFERS_DEADLINE + " TEXT NOT NULL, " +
             OFFERS_COMPANY + " TEXT NOT NULL, " +
             OFFERS_JOB_TITLE + " TEXT NOT NULL)";
@@ -51,7 +53,8 @@ public class DBHelper extends SQLiteOpenHelper {
             OFFERS_OBJECTID + " TEXT NOT NULL, " +
             OFFERS_DEADLINE + " TEXT NOT NULL, " +
             OFFERS_COMPANY + " TEXT NOT NULL, " +
-            OFFERS_JOB_TITLE + " TEXT NOT NULL)";
+            OFFERS_JOB_TITLE + " TEXT NOT NULL, "+
+			OFFERS_APP_LINK+" TEXT NOT NULL)";
 	
 	
 	public static final String CREATE_STARLIST = 
@@ -94,7 +97,7 @@ public class DBHelper extends SQLiteOpenHelper {
 		
 	}
 	
-	public boolean insertOffers (String table_name, String type, String ObjectID, String Deadline, String Company,String Job_Title)
+	public boolean insertOffers (String table_name, String type, String ObjectID, String Deadline, String Company,String Job_Title,String App_Link)
 	   {
 	      SQLiteDatabase db = this.getWritableDatabase();
 	      ContentValues contentValues = new ContentValues();
@@ -103,6 +106,7 @@ public class DBHelper extends SQLiteOpenHelper {
 	      contentValues.put(OFFERS_DEADLINE, Deadline);
 	      contentValues.put(OFFERS_COMPANY, Company);
 	      contentValues.put(OFFERS_JOB_TITLE, Job_Title);
+		  contentValues.put(OFFERS_APP_LINK,App_Link);
 	      db.insert(table_name, null, contentValues);
 	      return true;
 	   }
@@ -166,6 +170,7 @@ public class DBHelper extends SQLiteOpenHelper {
 	    	 newjob.SetCompany(res.getString(res.getColumnIndex(OFFERS_COMPANY)));
 	    	 newjob.SetJobTitle(res.getString(res.getColumnIndex(OFFERS_JOB_TITLE)));
 	    	 newjob.setObjectId(res.getString(res.getColumnIndex(OFFERS_OBJECTID)));
+			 newjob.setApplicationLink(res.getString(res.getColumnIndex(OFFERS_APP_LINK)));
 	    	 SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 	    	 Date date;
 			 try {

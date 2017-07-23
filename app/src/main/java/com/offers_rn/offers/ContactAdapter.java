@@ -83,6 +83,7 @@ public class ContactAdapter extends
 	    contactViewHolder.setObjectID(ci.getObjectId());
 	    contactViewHolder.setViewCount(ci.getViewCount());
 	    contactViewHolder.setDeadline(ci.getDeadline());
+		contactViewHolder.setApplicationLink(ci.getApplicationLink());
 		contactViewHolder.vCompany.setText(ci.getCompany());
 		contactViewHolder.vJobTitle.setText(ci.getJobTitle());
 		contactViewHolder.vViewCount.setText(Integer.toString(ci.getViewCount())+" Views");
@@ -205,7 +206,7 @@ public class ContactAdapter extends
 					.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
 		                @Override
 		                public boolean onMenuItemClick(MenuItem item){
-		                	if(MainApplication.mydb.insertOffers("offers_blacklist",type, Jobslist.get(i).getObjectId(), formatDate, Jobslist.get(i).getCompany(), Jobslist.get(i).getJobTitle()))
+		                	if(MainApplication.mydb.insertOffers("offers_blacklist",type, Jobslist.get(i).getObjectId(), formatDate, Jobslist.get(i).getCompany(), Jobslist.get(i).getJobTitle(),Jobslist.get(i).getApplicationLink()))
 		            		{
 		            	     Toast.makeText(contactViewHolder.itemView.getContext(), Jobslist.get(i).getJobTitle()+" is added to Black List", Toast.LENGTH_SHORT).show();
 		            	     remove(i);
@@ -277,6 +278,7 @@ public class ContactAdapter extends
 		protected ImageView CompanyLogo;
 		protected String objectID;
         protected String type;
+		protected String App_Link;
         protected ImageButton save;
         protected int ViewCount;
 		protected Jobs JobObject;
@@ -304,7 +306,7 @@ public class ContactAdapter extends
 		                
 		                save.setBackgroundResource(R.drawable.cardview_savedtick);
 		                
-		                if(MainApplication.mydb.insertOffers("offers",type, getObjectID(), getDeadline(), getCompany(), getJobTitle()))
+		                if(MainApplication.mydb.insertOffers("offers",type, getObjectID(), getDeadline(), getCompany(), getJobTitle(),getApplicationLink()))
 		                		{
 		                	Snackbar.make(v, getJobTitle()+" is added to Save List", Snackbar.LENGTH_SHORT).show();
 		                	//Toast.makeText(v.getContext(), getJobTitle()+" is saved to DB", Toast.LENGTH_SHORT).show();}
@@ -394,6 +396,14 @@ public class ContactAdapter extends
 		
 		public void setDeadline(Date date){
 			
+		}
+
+		public void setApplicationLink(String link){
+			this.App_Link = link;
+		}
+
+		public String getApplicationLink(){
+			return this.App_Link;
 		}
 
 		

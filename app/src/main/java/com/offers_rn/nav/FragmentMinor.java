@@ -186,7 +186,6 @@ public class FragmentMinor extends Fragment implements OnTabChangeListener,OnPag
 		if(Singleton.getInstance().getExchangeListCount()==0){
 			mLoadingSub = (ProgressBar) v.findViewById(R.id.loadingSpinner);
 			mLoadingSub.setVisibility(View.VISIBLE);
-			Singleton.getInstance().CompetitionQuery();
 			mLoadingSub.setVisibility(View.GONE);
 		}else if(Singleton.getInstance().getInternListCount()==0){
 			Singleton.getInstance().InternJobQuery();

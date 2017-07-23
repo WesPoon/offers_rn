@@ -99,10 +99,10 @@ public final class R {
 		public static final int com_shamanland_share = 0x7f070036;
 	}
 	public static final class style {
-		public static final int Theme_Facebook_Like = 0x7f0a0123;
-		public static final int Widget_FacebookLikeBox = 0x7f0a017d;
+		public static final int Theme_Facebook_Like = 0x7f0a0122;
+		public static final int Widget_FacebookLikeBox = 0x7f0a017c;
 		public static final int Widget_FacebookLikeButton = 0x7f0a0001;
-		public static final int Widget_FacebookLikeButtonBase = 0x7f0a017e;
+		public static final int Widget_FacebookLikeButtonBase = 0x7f0a017d;
 	}
 	public static final class styleable {
 		public static final int[] FacebookLikeBox = { 0x7f0100d1, 0x7f0100d2, 0x7f0100d3, 0x7f0100d4, 0x7f0100d5 };

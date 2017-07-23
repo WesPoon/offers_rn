@@ -20,20 +20,20 @@ import com.offers_rn.profile.ScollGallery;
 import com.offers_rn.profile.ViewProfile;
 import com.offers_rn.testcode.TestCheckBox;
 import com.offers_rn.chatroom.Chatroom;
-import com.offers_rn.menulist.Blacklist;
-import com.offers_rn.menulist.StarredList;
+import com.offers_rn.menulist.*;
 import com.offers_rn.nav.FragmentMajor;
 import com.offers_rn.nav.FragmentMinor;
 import com.offers_rn.nav.NavItem;
 import com.offers_rn.nav.NavListAdapter;
 import com.offers_rn.uielement.RoundedImageView;
 import com.squareup.picasso.Picasso;
-
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.NavigationMode;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.ContextThemeWrapper;
+import android.support.v7.widget.SearchView;
 //import android.support.design.widget.NavigationView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.support.v4.app.Fragment;
@@ -137,8 +137,8 @@ public class MainActivity extends AppCompatActivity{
 		listNavItems = new ArrayList<NavItem>();
 //		listNavItems.add(new NavItem(userName,"View Profile", R.drawable.ic_launcher));
 		listNavItems.add(new NavItem("Level Up","Intern / Exchange / Competition",R.drawable.levelup));
-		listNavItems.add(new NavItem("Final Year","Govern / MT / GT / Normal",R.drawable.youcaremost));		
-		listNavItems.add(new NavItem("For Elite","Scholar / Workshop / Mentorship",R.drawable.forelite));
+		listNavItems.add(new NavItem("Final Year","MT / GT",R.drawable.youcaremost));
+		listNavItems.add(new NavItem("For Elite","Summer Trip / Workshop / Mentorship",R.drawable.forelite));
 		listNavItems.add(new NavItem("Chat Room","Network Circle",R.drawable.chatroom));
 		listNavItems.add(new NavItem("Watch Advert","+10 PT",R.drawable.advert));
 //		listNavItems.add(new NavItem("Bad Jobs","Gossip:)",R.drawable.badjob));
@@ -334,8 +334,40 @@ public class MainActivity extends AppCompatActivity{
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);
+		try {
+
+			SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
+			searchView.setOnQueryTextListener(queryListener);
+		}catch(Exception e){
+
+		}
 		return super.onCreateOptionsMenu(menu);
 	}
+
+	final private android.support.v7.widget.SearchView.OnQueryTextListener queryListener = new android.support.v7.widget.SearchView.OnQueryTextListener() {
+
+		@Override
+		public boolean onQueryTextChange(String newText) {
+
+			//直接丟給filter
+			//MessageListMainFragment.this.adapter.getFilter().filter(newText);
+			if (newText.length()>0) {
+				Toast.makeText(getApplicationContext(), "Query Change " + newText + Integer.toString(newText.length()), Toast.LENGTH_SHORT).show();
+			}
+			return false;
+		}
+
+		@Override
+		public boolean onQueryTextSubmit(String query) {
+			Toast.makeText(getApplicationContext(),"Query Sub "+query,Toast.LENGTH_SHORT).show();
+			Intent intent_search = new Intent(getApplicationContext(), SearchList.class);
+			Bundle bundle_search = new Bundle();
+			bundle_search.putString("search_key", query);
+			intent_search.putExtras(bundle_search);
+			startActivity(intent_search);
+			return false;
+		}
+	};
 	
 
 	@Override

@@ -94,6 +94,7 @@ public class SaveAndBlackListAdapter extends RecyclerView.Adapter<SaveAndBlackLi
 						intent.putExtra("Company",card.getCompany());
 						intent.putExtra("JobTitle",card.getJobTitle());
 						intent.putExtra("Deadline", card.getDeadline());
+						intent.putExtra("Type",card.getType());
 						((Activity) v.getContext()).startActivity(intent);
 					}
 				 });

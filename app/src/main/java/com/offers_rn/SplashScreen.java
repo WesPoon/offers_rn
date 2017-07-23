@@ -53,7 +53,7 @@ public class SplashScreen extends Activity {
 		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
 		
 		if(!isNetworkConnected()) {
-		buildDialog(SplashScreen.this).show();
+			buildDialog(SplashScreen.this).show();
 
 		}
 		
@@ -74,10 +74,12 @@ public class SplashScreen extends Activity {
                 try{
                 	
                 	if (((MainApplication)SplashScreen.this.getApplication()).getInternListCount()==0){
-                	InternJobQuery();
-                	GradJobQuery();
-                	ExchangeQuery();
-                	CompetitionQuery();
+                		InternJobQuery();
+                		GradJobQuery();
+                		ExchangeQuery();
+                		CompetitionQuery();
+						Singleton.getInstance().MTQuery();
+						Singleton.getInstance().GTQuery();
                 	}
                 	
                 	while(true){
@@ -85,7 +87,11 @@ public class SplashScreen extends Activity {
                 			if(ExchangeQueryDone){
                 				if(GradJobQueryDone){
                 					if(CompetitionQueryDone){
-                						break;
+										if(Singleton.getInstance().MTQueryDone){
+											if(Singleton.getInstance().GTQueryDone){
+												break;
+											}
+										}
                 					}
                 				}
                 			}
@@ -150,7 +156,7 @@ public class SplashScreen extends Activity {
 	    builder.setCanceledOnTouchOutside(false);
 	   
 	    builder.setTitle("No Internet connection.");
-	    builder.setMessage("You have no internet connection");
+	    builder.setMessage("You have no internet connection. Cache Data would be shown");
 
 	    builder.setButton(AlertDialog.BUTTON_NEUTRAL,"Ok", new DialogInterface.OnClickListener() {
 
@@ -158,7 +164,6 @@ public class SplashScreen extends Activity {
 	        public void onClick(DialogInterface dialog, int which) {
 
 	            dialog.dismiss();
-	    		SplashScreen.this.onDestroy();
 	        }
 	    });
 

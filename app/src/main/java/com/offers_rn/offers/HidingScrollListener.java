@@ -1,4 +1,4 @@
-package com.wesley.offers_v2.offers;
+package com.offers_rn.offers;
 
 import android.support.v7.widget.RecyclerView;
 
