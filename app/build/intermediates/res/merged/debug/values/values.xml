@@ -47,12 +47,16 @@
         <item>@string/profile_industry_Telecommunication</item>
         <item>@string/profile_industry_Retail</item>
         <item>@string/profile_industry_CivilService</item>
+        <item>@string/profile_industry_CorpBank</item>
     </string-array>
     <string-array name="major_array">
         <item>@string/profile_major_Engineering</item>
         <item>@string/profile_major_BBA</item>
         <item>@string/profile_major_Journalism</item>
-        <item>@string/profile_major_ComputerScience</item>
+        <item>@string/profile_major_InformationSystem</item>
+        <item>@string/profile_major_QF</item>
+        <item>@string/profile_major_Art</item>
+        <item>@string/profile_major_Law</item>
     </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -523,7 +527,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_search">Search</string>
     <string name="action_settings">Settings</string>
-    <string name="app_name">OFFERS</string>
+    <string name="app_name">Squeak</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="black_list">Black List</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
@@ -592,6 +596,7 @@
     <string name="profile_gpa_below_3">3.5&lt;GPA</string>
     <string name="profile_gpa_classified">Classified</string>
     <string name="profile_industry_CivilService">Civil Service</string>
+    <string name="profile_industry_CorpBank">Corp Bank</string>
     <string name="profile_industry_Engineering">Engineering</string>
     <string name="profile_industry_Finance">Finance</string>
     <string name="profile_industry_IT">IT</string>
@@ -599,10 +604,13 @@
     <string name="profile_industry_Retail">Retail</string>
     <string name="profile_industry_Telecommunication">Telecommunication</string>
     <string name="profile_major_Accounting">Accounting</string>
+    <string name="profile_major_Art">Art Major</string>
     <string name="profile_major_BBA">BBA</string>
-    <string name="profile_major_ComputerScience">Computer Science</string>
     <string name="profile_major_Engineering">Engineering</string>
+    <string name="profile_major_InformationSystem">Information System</string>
     <string name="profile_major_Journalism">Journalism</string>
+    <string name="profile_major_Law">Law or related Major</string>
+    <string name="profile_major_QF">Quantitative Fiance</string>
     <string name="profile_page1_disclaimer">we are an independent organisation that is not affiuated with any other association. The company trademarks displayed on our webiste does not suggest any form of sponsorship and afficiation with the companies.</string>
     <string name="profile_page1_intro">OFFERS is an apps to replace the stupid and messy CUHK mass mail system and Career Website. We aim at encouraging concise information exchange with high transperancy\n\nYOU ARE NOW HIGHLY ENCOURAGED TO REGISTER WITH A RANDOM USERNAME WHICH CAN HIDE YOUR REAL IDENTITY</string>
     <string name="profile_page1_username">Your User Name:)</string>

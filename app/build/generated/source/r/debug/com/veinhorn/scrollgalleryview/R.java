@@ -534,8 +534,8 @@ public final class R {
 		public static final int text2 = 0x7f0e00b1;
 		public static final int textSpacerNoButtons = 0x7f0e0060;
 		public static final int textView = 0x7f0e0100;
-		public static final int thumbnails_container = 0x7f0e00f5;
-		public static final int thumbnails_scroll_view = 0x7f0e00f4;
+		public static final int thumbnails_container = 0x7f0e00f6;
+		public static final int thumbnails_scroll_view = 0x7f0e00f5;
 		public static final int time = 0x7f0e00af;
 		public static final int title = 0x7f0e0056;
 		public static final int title_template = 0x7f0e005b;
@@ -544,7 +544,7 @@ public final class R {
 		public static final int useLogo = 0x7f0e0019;
 		public static final int videoProgress = 0x7f0e00ff;
 		public static final int videoView = 0x7f0e00fe;
-		public static final int viewPager = 0x7f0e00f3;
+		public static final int viewPager = 0x7f0e00f4;
 		public static final int withText = 0x7f0e004a;
 		public static final int wrap_content = 0x7f0e001f;
 	}

@@ -38,7 +38,7 @@ import com.veinhorn.scrollgalleryview.loader.MediaLoader;
         public void loadMedia(Context context, final ImageView imageView, final MediaLoader.SuccessCallback callback) {
 
             imageView.setBackgroundColor(Color.parseColor("#87CEEB"));
-      /*      imageView.setOnClickListener(new View.OnClickListener() {
+       /*     imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(imageView.getContext(),AlertDialog.THEME_HOLO_LIGHT);

@@ -114,11 +114,11 @@ public class MainActivity extends AppCompatActivity{
 		actionBar = getSupportActionBar();
 
 	    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-	    getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_launcher);
+	    getSupportActionBar().setHomeAsUpIndicator(R.mipmap.ic_squeak);
 	    
 	    getSupportActionBar().setDisplayShowHomeEnabled(true);
 	    getSupportActionBar().setHomeButtonEnabled(true);
-	    getSupportActionBar().setIcon(R.drawable.ic_launcher); //also displays wide logo
+	    getSupportActionBar().setIcon(R.mipmap.ic_squeak); //also displays wide logo
 
 //      getSupportActionBar().setDisplayShowTitleEnabled(false); //optional
 //		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity{
 				into(profilePic);
 
 		listNavItems = new ArrayList<NavItem>();
-//		listNavItems.add(new NavItem(userName,"View Profile", R.drawable.ic_launcher));
+
 		listNavItems.add(new NavItem("Level Up","Intern / Exchange / Competition",R.drawable.levelup));
 		listNavItems.add(new NavItem("Final Year","MT / GT",R.drawable.youcaremost));
 		listNavItems.add(new NavItem("For Elite","Summer Trip / Workshop / Mentorship",R.drawable.forelite));
@@ -365,6 +365,7 @@ public class MainActivity extends AppCompatActivity{
 			bundle_search.putString("search_key", query);
 			intent_search.putExtras(bundle_search);
 			startActivity(intent_search);
+
 			return false;
 		}
 	};

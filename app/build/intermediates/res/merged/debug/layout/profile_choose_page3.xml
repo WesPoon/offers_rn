@@ -43,6 +43,7 @@
         android:layout_marginBottom="25dp"
         android:layout_gravity="center"        
         profile:index="2" />
+
 	</LinearLayout>
     </android.support.v7.widget.CardView>    
     
@@ -79,6 +80,40 @@
         android:layout_gravity="center" />
 	</LinearLayout>	
 	</android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/card_view3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="2dp"
+        tools:context=".InternListActivity" >   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >    
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:text="@string/profile_choose_major_context" />
+    
+    <Spinner
+        android:id="@+id/profile_choose_major_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="20dp"        
+        android:layout_gravity="center" />
+    </LinearLayout> 
+    </android.support.v7.widget.CardView>
     
     <Button
         android:id="@+id/profile_choose_page3_confirm_btn"
@@ -88,6 +123,9 @@
         android:layout_marginTop="15dp"
         android:layout_gravity="right|center_vertical"
         android:text="@string/form_submit" />
+
+
+
     
 
 </LinearLayout>

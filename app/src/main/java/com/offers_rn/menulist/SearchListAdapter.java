@@ -256,7 +256,7 @@ public class SearchListAdapter extends
 		View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(
 				R.layout.offer_card, viewGroup, false);
 		
-		Log.v("onCreateViewHolder","called");
+		Log.v("onCreateViewHolder","searched");
 		
 		return new ContactViewHolder(itemView);
 		

@@ -113,7 +113,7 @@ public class ChoosePage1 extends Activity implements OnClickListener{
 	}
 	
 	public void gotoNext(){
-			Intent intent = new Intent(this, ChoosePage2.class);
+			Intent intent = new Intent(this, ChoosePage3.class);
 			startActivity(intent);
 	}
 	

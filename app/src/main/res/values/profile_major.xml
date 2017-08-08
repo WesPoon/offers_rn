@@ -5,13 +5,20 @@
     <string name="profile_major_BBA">BBA</string>
     <string name="profile_major_Journalism">Journalism</string>
     <string name="profile_major_Accounting">Accounting</string>
-    <string name="profile_major_ComputerScience">Computer Science</string>
+    <string name="profile_major_InformationSystem">Information System</string>
+    <string name="profile_major_QF">Quantitative Fiance</string>
+    <string name="profile_major_Art">Art Major</string>
+    <string name="profile_major_Law">Law or related Major</string>
+
 
     <string-array name="major_array">
         <item>@string/profile_major_Engineering</item>
         <item>@string/profile_major_BBA</item>
         <item>@string/profile_major_Journalism</item>
-        <item>@string/profile_major_ComputerScience</item>
+        <item>@string/profile_major_InformationSystem</item>
+        <item>@string/profile_major_QF</item>
+        <item>@string/profile_major_Art</item>
+        <item>@string/profile_major_Law</item>
     </string-array>
 
 </resources>

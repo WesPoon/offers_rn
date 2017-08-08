@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_squeak.jpg",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_squeak.jpg"
+    },
+    {
         "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     }

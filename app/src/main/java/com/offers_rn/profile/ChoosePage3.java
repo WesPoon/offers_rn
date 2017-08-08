@@ -32,9 +32,10 @@ import android.widget.Toast;
 
 public class ChoosePage3 extends Activity implements OnClickListener, OnItemSelectedListener{
 	ChooseIndustrySpinner spn1, spn2;
-	Spinner spn3;
+	Spinner spn3,spn4;
 	Button but1;
 	String industry1, industry2;
+	String major="";
 	int career_style=Profile.UNDEFINED;
 	@SuppressLint("NewApi") @Override
 	public void onCreate(Bundle savedInstanceState,
@@ -53,15 +54,30 @@ public class ChoosePage3 extends Activity implements OnClickListener, OnItemSele
 		setContentView(R.layout.profile_choose_page3);
 		spn1 = (ChooseIndustrySpinner) findViewById(R.id.profile_choose_industries_spinner1);
 		spn2 = (ChooseIndustrySpinner) findViewById(R.id.profile_choose_industries_spinner2);
+		
+
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.industry_array, android.R.layout.simple_spinner_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spn1.setAdapter(adapter);
 		spn2.setAdapter(adapter);
+
+
 		spn3 = (Spinner) findViewById(R.id.profile_choose_career_style_spinner);
 		ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.career_style_array, android.R.layout.simple_spinner_item);
 		adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spn3.setAdapter(adapter2);
 		spn3.setOnItemSelectedListener(this);
+
+
+		spn4 = (Spinner) findViewById(R.id.profile_choose_major_spinner);
+
+		ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this, R.array.major_array, android.R.layout.simple_spinner_item);
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+		spn4.setAdapter(adapter3);
+		spn4.setOnItemSelectedListener(this);
+
+
 		but1 = (Button) findViewById(R.id.profile_choose_page3_confirm_btn);
 		but1.setOnClickListener(this);
 	}
@@ -69,14 +85,19 @@ public class ChoosePage3 extends Activity implements OnClickListener, OnItemSele
 	@Override
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
-		//major = et1.getText().toString();
+	
+		
+
+
 		industry1 = spn1.getValue();
 		industry2 = spn2.getValue();
 		GetSetCareerStyle(spn3.getSelectedItem().toString());
+		major = spn4.getSelectedItem().toString();
 	    SharedPreferences settings = getSharedPreferences(this.getApplicationContext().getString(R.string.app_name), 0);
 	    SharedPreferences.Editor PE = settings.edit();
 	    PE.putString("industry1", industry1);
 	    PE.putString("industry2", industry2);
+	    PE.putString("major", major);
 	    PE.remove("career_style");
 	    PE.putInt("career_style",career_style);
 	    PE.commit();

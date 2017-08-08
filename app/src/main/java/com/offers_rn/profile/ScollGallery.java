@@ -13,6 +13,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
@@ -21,8 +23,11 @@ import android.widget.Toast;
 
 import com.offers_rn.R;
 import com.offers_rn.SplashScreen;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
+import com.parse.SignUpCallback;
 import com.veinhorn.scrollgalleryview.MediaInfo;
-
 import com.veinhorn.scrollgalleryview.loader.DefaultImageLoader;
 import com.veinhorn.scrollgalleryview.loader.DefaultVideoLoader;
 import com.veinhorn.scrollgalleryview.loader.MediaLoader;
@@ -38,17 +43,23 @@ public class ScollGallery extends ActionBarActivity {
     private static final ArrayList<String> images = new ArrayList<>(Arrays.asList(
             "http://cdn.bulbagarden.net/upload/thumb/b/b1/151Mew.png/250px-151Mew.png",
             "http://pldh.net/media/dreamworld/054.png",
-            "http://pldh.net/media/dreamworld/004.png",
             "http://cdn.bulbagarden.net/upload/thumb/7/70/079Slowpoke.png/250px-079Slowpoke.png",
-            "https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12531123_477777645759687_2115052592_n.jpg?ig_cache_key=MTE5NDY5MDUyNzA1Mzk1MDkyMw%3D%3D.2",
+            "https://media.eventhubs.com/images/characters/ssb4/ryu.png",
+            "https://media.eventhubs.com/images/characters/ssb4/sheik.png",
+            "https://media.eventhubs.com/images/characters/ssb4/sonic.png",
+            "https://media.eventhubs.com/images/characters/ssb4/toon_link.png",
+            "https://media.eventhubs.com/images/characters/ssb4/villager.png",
+            "https://media.eventhubs.com/images/characters/ssb4/pikachu.png",
             "http://www.socialtalent.co/wp-content/uploads/blog-content/so-logo.png"
             ));
-
-    private static final String movieUrl = "http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4";
 
     private NewScrollGalleryView newScrollGalleryView;
     private HorizontalScrollView thumbNailScroll;
     private FloatingActionButton floatActionButton;
+    private final List<MediaInfo> infos = new ArrayList<>(images.size());
+
+    ParseUser user;
+    String username="";
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +67,6 @@ public class ScollGallery extends ActionBarActivity {
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Pick one as Icon");
 
-        final List<MediaInfo> infos = new ArrayList<>(images.size());
         for (String url : images) infos.add(MediaInfo.mediaLoader(new PicassoImageLoader(url){
 
         }));
@@ -71,7 +81,9 @@ public class ScollGallery extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-                String profile_pic_url = ((PicassoImageLoader)infos.get(newScrollGalleryView.getViewPager().getCurrentItem()).getLoader()).getURL();
+
+                uploadProfilePic();
+   /*             String profile_pic_url = ((PicassoImageLoader)infos.get(newScrollGalleryView.getViewPager().getCurrentItem()).getLoader()).getURL();
                 if(profile_pic_url==null) {
                     Toast.makeText(v.getContext(), "test null", Toast.LENGTH_LONG).show();
                 }
@@ -84,7 +96,7 @@ public class ScollGallery extends ActionBarActivity {
                     SQLiteDatabase mydatabase = openOrCreateDatabase("UserDB",MODE_PRIVATE,null);
                     Intent intent = new Intent(v.getContext(), SplashScreen.class);
                     startActivity(intent);
-                }
+                } */
             }
 
             public void gotoNext(View v){
@@ -93,7 +105,7 @@ public class ScollGallery extends ActionBarActivity {
         });
 
         newScrollGalleryView
-                .setThumbnailSize(200)
+                .setThumbnailSize(150)
                 .setZoom(false)
 
                 .setFragmentManager(getSupportFragmentManager())
@@ -126,6 +138,73 @@ public class ScollGallery extends ActionBarActivity {
 
     private Bitmap toBitmap(int image) {
         return ((BitmapDrawable) getResources().getDrawable(image)).getBitmap();
+    }
+
+    private void uploadProfilePic(){
+
+        if(ParseUser.getCurrentUser()==null){
+            user = new ParseUser();
+            user.setUsername(username);
+            user.setPassword("565656");
+            user.signUpInBackground(new SignUpCallback() {
+                public void done(ParseException e) {
+                    if (e == null) {
+                        // Hooray! Let them use the app now.
+
+
+                        Log.d("success","");
+
+
+                    } else {
+                        Log.d(e.getMessage(),"fail");
+                        // Sign up didn't succeed. Look at the ParseException
+                        // to figure out what went wrong
+                    }
+                }
+            });
+        }
+        else{
+
+            final String profile_pic_url = ((PicassoImageLoader)infos.get(newScrollGalleryView.getViewPager().getCurrentItem()).getLoader()).getURL();
+            user = ParseUser.getCurrentUser();
+            user.setUsername(username);
+            user.put("profile_pic",profile_pic_url);
+            user.saveInBackground(new SaveCallback(){
+
+                @Override
+                public void done(ParseException arg0) {
+                    // TODO Auto-generated method stub
+                    if(arg0==null){
+
+
+                        if(profile_pic_url==null) {
+
+                        }
+                        else{
+
+                            SharedPreferences settings = getSharedPreferences(getApplicationContext().getString(R.string.app_name), 0);
+                            SharedPreferences.Editor PE = settings.edit();
+                            PE.putString("profile_pic_url", profile_pic_url);
+                            PE.commit();
+                            SQLiteDatabase mydatabase = openOrCreateDatabase("UserDB",MODE_PRIVATE,null);
+                            Intent intent = new Intent(getApplicationContext(), SplashScreen.class);
+                            startActivity(intent);
+                        }
+
+                    }
+                    else{
+
+                    }
+                }
+
+
+            });
+        }
+
+
+
+
+
     }
 }
 

@@ -33,7 +33,7 @@
         android:name="com.offers_rn.MainApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_squeak"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:supportsRtl="true"
@@ -178,7 +178,8 @@
         </activity>
         <activity
             android:name="com.offers_rn.menulist.SearchList"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="nosensor" >
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

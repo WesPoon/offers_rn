@@ -486,7 +486,7 @@ public final class R {
 		public static final int beginning = 0x7f0e0044;
 		public static final int buttonPanel = 0x7f0e0057;
 		public static final int cancel_action = 0x7f0e00aa;
-		public static final int catalyst_redbox_title = 0x7f0e00ec;
+		public static final int catalyst_redbox_title = 0x7f0e00ed;
 		public static final int center = 0x7f0e0023;
 		public static final int centerCrop = 0x7f0e003d;
 		public static final int centerInside = 0x7f0e003e;
@@ -531,10 +531,10 @@ public final class R {
 		public static final int progress_circular = 0x7f0e000b;
 		public static final int progress_horizontal = 0x7f0e000c;
 		public static final int radio = 0x7f0e0067;
-		public static final int rn_frame_file = 0x7f0e00eb;
-		public static final int rn_frame_method = 0x7f0e00ea;
-		public static final int rn_redbox_reloadjs = 0x7f0e00ee;
-		public static final int rn_redbox_stack = 0x7f0e00ed;
+		public static final int rn_frame_file = 0x7f0e00ec;
+		public static final int rn_frame_method = 0x7f0e00eb;
+		public static final int rn_redbox_reloadjs = 0x7f0e00ef;
+		public static final int rn_redbox_stack = 0x7f0e00ee;
 		public static final int screen = 0x7f0e002d;
 		public static final int scrollView = 0x7f0e005f;
 		public static final int search_badge = 0x7f0e0071;
