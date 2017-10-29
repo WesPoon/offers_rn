@@ -110,7 +110,6 @@ public class SplashScreen extends Activity {
                 finally{
                 	Intent Main= new Intent(SplashScreen.this, MainActivity.class);
                     startActivity(Main);
-                    Log.d("Test","1");
                     Intent startService = new Intent(SplashScreen.this, OfferService.class);
                     startService(startService);
                 	interrupt();
@@ -180,7 +179,7 @@ public class SplashScreen extends Activity {
 
          query.include("Company_Symbol");
          Calendar c = Calendar.getInstance(); 
-  //       query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
+         query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
   //       query.whereEqualTo("Description", "Elite");
          query.findInBackground(new FindCallback<Jobs>() {
            @Override
@@ -242,7 +241,7 @@ public class SplashScreen extends Activity {
 		query.setCachePolicy(ParseQuery.CachePolicy.NETWORK_ELSE_CACHE);
         query.include("Company_Symbol");
         Calendar c = Calendar.getInstance(); 
-//        query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
+        query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
         query.findInBackground(new FindCallback<GradJobs>() {
           @Override
           public void done(List<GradJobs> list, ParseException e) {

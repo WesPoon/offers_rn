@@ -8,15 +8,15 @@ package com.bhargavms.dotloader;
 
 public final class R {
 	public static final class attr {
-		public static final int color_array = 0x7f0100c7;
-		public static final int dot_radius = 0x7f0100c6;
-		public static final int number_of_dots = 0x7f0100c8;
+		public static final int color_array = 0x7f0100ca;
+		public static final int dot_radius = 0x7f0100c9;
+		public static final int number_of_dots = 0x7f0100cb;
 	}
 	public static final class string {
-		public static final int app_name = 0x7f070014;
+		public static final int app_name = 0x7f07001b;
 	}
 	public static final class styleable {
-		public static final int[] DotLoader = { 0x7f0100c6, 0x7f0100c7, 0x7f0100c8 };
+		public static final int[] DotLoader = { 0x7f0100c9, 0x7f0100ca, 0x7f0100cb };
 		public static final int DotLoader_color_array = 1;
 		public static final int DotLoader_dot_radius = 0;
 		public static final int DotLoader_number_of_dots = 2;

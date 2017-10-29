@@ -1,5 +1,6 @@
 package com.offers_rn.nav;
 
+
 import java.util.List;
 import java.util.Vector;
 
@@ -14,6 +15,7 @@ import com.offers_rn.offers.GradFragment;
 import com.offers_rn.offers.InternFragment;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -128,6 +130,9 @@ public class FragmentMinor extends Fragment implements OnTabChangeListener,OnPag
 			tabHost.addTab(tabSpec);
 			TextView x = (TextView) tabHost.getTabWidget().getChildAt(i-1).findViewById(android.R.id.title);
 		    x.setTextSize(11);
+
+		    Typeface myTypeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/proxima-nova-soft-light-webfont.ttf");
+            x.setTypeface(myTypeface);
 		    
 		}
 		
@@ -183,13 +188,13 @@ public class FragmentMinor extends Fragment implements OnTabChangeListener,OnPag
 		
 		Toast.makeText(getActivity(),"Fragment Minor Resume",Toast.LENGTH_LONG).show();
 	//	Toast.makeText(getActivity(),"Fragment Major Resume",Toast.LENGTH_LONG).show();
-		if(Singleton.getInstance().getExchangeListCount()==0){
-			mLoadingSub = (ProgressBar) v.findViewById(R.id.loadingSpinner);
-			mLoadingSub.setVisibility(View.VISIBLE);
-			mLoadingSub.setVisibility(View.GONE);
-		}else if(Singleton.getInstance().getInternListCount()==0){
-			Singleton.getInstance().InternJobQuery();
-		}
+	//	if(Singleton.getInstance().getExchangeListCount()==0){
+	//		mLoadingSub = (ProgressBar) v.findViewById(R.id.loadingSpinner);
+    //			mLoadingSub.setVisibility(View.VISIBLE);
+	//		mLoadingSub.setVisibility(View.GONE);
+	//	}else if(Singleton.getInstance().getInternListCount()==0){
+	//		Singleton.getInstance().InternJobQuery();
+	//	}
 	}
 
 	@Override

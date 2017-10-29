@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.util.Log;
@@ -144,8 +145,13 @@ public class MessageAdapter extends BaseAdapter {
 			}
 		});
         // set the elements' contents
+
+
+        Typeface myTypeface = Typeface.createFromAsset(holder.LiveLikeView.getContext().getAssets(), "fonts/proxima-nova-soft-light-webfont.ttf");
         holder.bodyView.setText(message.text);
+        holder.bodyView.setTypeface(myTypeface);
         holder.senderView.setText(message.name);
+        holder.senderView.setTypeface(myTypeface);
         holder.LiveLikeView.setText(Integer.toString(message.livelikecount));
         holder.LiveLikeView.setSelected(message.IsSelected());
         
@@ -199,7 +205,7 @@ public class MessageAdapter extends BaseAdapter {
          // fetch the user's Twitter avatar from their username
          // and place it into the thumbnailImageView.
         Picasso.with(messageContext).
-                load("https://twitter.com/" + message.name + "/profile_image?size=original").
+                load(message.getProfilePicUrl()).
                 //placeholder(R.mipmap.ic_launcher).
                 placeholder(R.drawable.ic_launcher).
                 into(holder.thumbnailImageView); 

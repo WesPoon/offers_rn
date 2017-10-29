@@ -44,6 +44,7 @@ public class Chatroom extends ActionBarActivity implements View.OnClickListener 
     Button sendButton;
     final String MESSAGES_ENDPOINT="http://54.65.1.149/offers/";
     String username;
+    String profileUrl;
     Pusher pusher = new Pusher("8057e8f52fc2b9ecf004");
     Channel channel;
     
@@ -93,6 +94,7 @@ public class Chatroom extends ActionBarActivity implements View.OnClickListener 
 					 msg.setTextContent(retrive_message.getTextContent());
 					 msg.setObjectId(retrive_message.getObjectId());
 					 msg.setLiveLikeCount(retrive_message.getLiveLikeCount());
+                     msg.setProfilePicUrl(retrive_message.getProfilePicUrl());
 					 history.add(msg);
 				     messageAdapter.add(msg);
 				}
@@ -146,6 +148,7 @@ public class Chatroom extends ActionBarActivity implements View.OnClickListener 
         }); */
 		SharedPreferences settings = getSharedPreferences(this.getApplicationContext().getString(R.string.app_name), 0);
 	    username = settings.getString("username", "/");
+        profileUrl = settings.getString("profile_pic_url","/");
    }
     
     @Override
@@ -164,7 +167,8 @@ public class Chatroom extends ActionBarActivity implements View.OnClickListener 
         params.put("text", text);
         params.put("name", username);
         params.put("time", new Date().getTime());
-       
+        params.put("url", profileUrl);
+            
         // create our HTTP client
         AsyncHttpClient client = new AsyncHttpClient();        
         client.post(MESSAGES_ENDPOINT, params, new JsonHttpResponseHandler(){

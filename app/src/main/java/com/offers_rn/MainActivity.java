@@ -23,6 +23,7 @@ import com.offers_rn.chatroom.Chatroom;
 import com.offers_rn.menulist.*;
 import com.offers_rn.nav.FragmentMajor;
 import com.offers_rn.nav.FragmentMinor;
+import com.offers_rn.nav.FragmentThird;
 import com.offers_rn.nav.NavItem;
 import com.offers_rn.nav.NavListAdapter;
 import com.offers_rn.uielement.RoundedImageView;
@@ -118,23 +119,14 @@ public class MainActivity extends AppCompatActivity{
 	    
 	    getSupportActionBar().setDisplayShowHomeEnabled(true);
 	    getSupportActionBar().setHomeButtonEnabled(true);
-	    getSupportActionBar().setIcon(R.mipmap.ic_squeak); //also displays wide logo
+	  //  getSupportActionBar().setIcon(R.mipmap.ic_squeak); //also displays wide logo
 
 //      getSupportActionBar().setDisplayShowTitleEnabled(false); //optional
 //		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 //      actionBar.setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP | ActionBar.DISPLAY_SHOW_CUSTOM | ActionBar.DISPLAY_SHOW_HOME);
-		SharedPreferences settings = getSharedPreferences(this.getApplicationContext().getString(R.string.app_name), 0);
-	    userName = settings.getString("username", "/");
-		TextView userName_TextView = (TextView)findViewById(R.id.userName);
-	    userName_TextView.setText(userName);
+		getPrefs();
 
-		profile_pic_url = settings.getString("profile_pic_url","/");
-		Picasso.with(this).
-				load(profile_pic_url).
-				placeholder(R.drawable.graduate_jobs).
-				into(profilePic);
-
-		listNavItems = new ArrayList<NavItem>();
+		listNavItems = new ArrayList<>();
 
 		listNavItems.add(new NavItem("Level Up","Intern / Exchange / Competition",R.drawable.levelup));
 		listNavItems.add(new NavItem("Final Year","MT / GT",R.drawable.youcaremost));
@@ -216,6 +208,12 @@ public class MainActivity extends AppCompatActivity{
 				    break;
 				    
 				case 2:
+					fm
+					.beginTransaction()
+					.replace(R.id.main_content, FragmentThird.newInstance(actionBar))
+					.commit();					
+					lvNav.setItemChecked(position, true);					
+					drawerLayout.closeDrawers();	
 					selected = 2;
 					break;
 				
@@ -224,7 +222,7 @@ public class MainActivity extends AppCompatActivity{
 					break;
 					
 				case 4:
-					test();
+					GoogleAdv();
 					break;
 			    
 				default: break;
@@ -263,72 +261,7 @@ public class MainActivity extends AppCompatActivity{
 		Log.d("onCreate","here");
 		
 		drawerLayout.setDrawerListener(drawerlistener);
-		
 
-		
-        
-		// Create the adapter that will return a fragment for each of the three
-		// primary sections of the activity.
-	/*	mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
-		// Set up the ViewPager with the sections adapter.
-		mViewPager = (ViewPager) findViewById(R.id.pager);
-		mViewPager.setAdapter(mSectionsPagerAdapter);
-		mViewPager.setOffscreenPageLimit(3);
-  
-		// When swiping between different sections, select the corresponding
-		// tab. We can also use ActionBar.Tab#select() to do this if we have
-		// a reference to the Tab.
-		mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-			@Override
-			public void onPageSelected(int position) {
-				actionBar.setSelectedNavigationItem(position);
-			}
-		});
-		
-		actionBar.addTab(
-	            actionBar.newTab()
-	                    
-	                    .setText("Intern")
-	                    .setTabListener(this)
-	                    
-	    );
-
-	    actionBar.addTab(
-	            actionBar.newTab()
-	                    .setText("GradJob")
-	                    .setTabListener(this)
-	    );
-	    
-	    actionBar.addTab(
-	            actionBar.newTab()
-	                    .setText("Exchange")
-	                    .setTabListener(this)
-	    );
-	    
-	    actionBar.addTab(
-	            actionBar.newTab()
-	                    .setText("Comp")
-	                    .setTabListener(this)
-	    );
-	    
-	    
-	   
-
-	  
-	    
-		
-		//setTabsMaxWidth();
-
-		// For each of the sections in the app, add a tab to the action bar.
-		/*for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
-			// Create a tab with text corresponding to the page title defined by
-			// the adapter. Also specify this Activity object, which implements
-			// the TabListener interface, as the callback (listener) for when
-			// this tab is selected.
-			//actionBar.addTab(actionBar.newTab().setText(mSectionsPagerAdapter.getPageTitle(i)).setTabListener(this));
-			actionBar.addTab(actionBar.newTab().setIcon(R.drawable.icon_1).setTabListener(this));
-		} */
 	}
 
 	@Override
@@ -339,7 +272,7 @@ public class MainActivity extends AppCompatActivity{
 			SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
 			searchView.setOnQueryTextListener(queryListener);
 		}catch(Exception e){
-
+			Log.d("Error",e.getMessage());
 		}
 		return super.onCreateOptionsMenu(menu);
 	}
@@ -405,6 +338,10 @@ public class MainActivity extends AppCompatActivity{
             intent2.putExtras(bundle2);
     		startActivity(intent2);
             return true;
+
+        case R.id.filter:
+
+        	return true;
             
         case R.id.email_list:
         	
@@ -509,12 +446,11 @@ public class MainActivity extends AppCompatActivity{
 	 */
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		ArrayList<Fragment> fragment_list;
-		ArrayList<Fragment> minor_fragment_list;
+
 		public SectionsPagerAdapter(FragmentManager fm) {
 			super(fm);
-			fragment_list = new ArrayList<Fragment>();
-		//	fragment_list.add(MainFragment.newInstance());
-			//minor_fragment_list = new ArrayList<Fragment>();
+			fragment_list = new ArrayList<>();
+
 			fragment_list.add(InternFragment.newInstance(actionBar));
 			fragment_list.add(GradFragment.newInstance(actionBar));
 			fragment_list.add(InternFragment.newInstance(actionBar));
@@ -566,6 +502,13 @@ public class MainActivity extends AppCompatActivity{
 	}
 
 	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		getPrefs();
+	}
+
+	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
 		
 		Log.d("onConfig","done");
@@ -603,9 +546,24 @@ public class MainActivity extends AppCompatActivity{
 		Intent intent = new Intent(this, ViewProfile.class);
 		startActivity(intent);
 	}
+
+	public void getPrefs(){
+
+		SharedPreferences settings = getSharedPreferences(this.getApplicationContext().getString(R.string.app_name), 0);
+		userName = settings.getString("username", "/");
+		TextView userName_TextView = (TextView)findViewById(R.id.userName);
+		userName_TextView.setText(userName);
+
+		profile_pic_url = settings.getString("profile_pic_url","/");
+		Picasso.with(this).
+				load(profile_pic_url).
+				placeholder(R.drawable.graduate_jobs).
+				into(profilePic);
+
+	}
 	
-	public void test(){
-		Intent intent = new Intent(this, ScollGallery.class);
+	public void GoogleAdv(){
+		Intent intent = new Intent(this, GoogleAdv.class);
 		startActivity(intent);
 	}
 	

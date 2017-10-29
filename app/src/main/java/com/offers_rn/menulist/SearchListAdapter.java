@@ -297,7 +297,7 @@ public class SearchListAdapter extends
 		        @Override
 		        public void onClick(View v) {
 		        	
-		        	if(click==false){
+		        	if(!click){
 		                
 		                save.setBackgroundResource(R.drawable.cardview_savedtick);
 		                
@@ -310,7 +310,7 @@ public class SearchListAdapter extends
 		                click=true;
 		        	}
 		        	else{
-		        	     if(click==true)
+		        	     if(click)
 		        	     {
 		        		     save.setBackgroundResource(R.drawable.cardview_savebutton); 		     
 		        		     if(MainApplication.mydb.deleteOffers("offers",getObjectID()))
@@ -335,23 +335,20 @@ public class SearchListAdapter extends
 		@SuppressWarnings("finally")
 		private byte[] getBytes(){
 			
-			Bitmap bmp=null;
+			Bitmap bmp;
 			byte[] byteArray=null;
 			try{
 			    bmp=((BitmapDrawable)this.CompanyLogo.getDrawable()).getBitmap();
 			
-			ByteArrayOutputStream stream = new ByteArrayOutputStream();
-			bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
-			byteArray = stream.toByteArray();		
+				ByteArrayOutputStream stream = new ByteArrayOutputStream();
+				bmp.compress(Bitmap.CompressFormat.PNG, 100, stream);
+				byteArray = stream.toByteArray();
+
+			}
+			catch(Exception e){
+
+			}
 			return byteArray;
-			}
-			finally{
-				
-				return byteArray;
-			}
-			
-			
-			
 			
 		}
 		
@@ -453,7 +450,7 @@ public class SearchListAdapter extends
 		    UpViewCount.start();
 		    
 			
-			Intent intent = new Intent((Context) arg0.getContext(), InternDetailActivity.class);
+			Intent intent = new Intent(arg0.getContext(), InternDetailActivity.class);
 			intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 			
 			intent.putExtra("JobObjectID", getObjectID());

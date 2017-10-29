@@ -50,6 +50,7 @@ import com.veinhorn.scrollgalleryview.loader.MediaLoader;
 
             Picasso.with(context)
                     .load(url)
+                    .resize(200,200)
                     .placeholder(R.drawable.placeholder_image)
                     .into(imageView, new ImageCallback(callback));
 

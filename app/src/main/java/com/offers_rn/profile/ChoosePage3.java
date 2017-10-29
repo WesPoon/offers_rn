@@ -1,14 +1,7 @@
 package com.offers_rn.profile;
 
-import java.util.HashMap;
 
-import org.json.JSONObject;
-
-import com.parse.ParseException;
-import com.parse.ParseUser;
-import com.parse.SignUpCallback;
 import com.offers_rn.R;
-import com.offers_rn.SplashScreen;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -132,10 +125,6 @@ public class ChoosePage3 extends Activity implements OnClickListener, OnItemSele
 	}
 	
 	public void gotoNext(){
-/*		SQLiteDatabase mydatabase = openOrCreateDatabase("UserDB",MODE_PRIVATE,null);
-		
-		Intent intent = new Intent(this, SplashScreen.class);
-		startActivity(intent); */
 
 		Intent intent = new Intent(this, ScollGallery.class);
 		startActivity(intent);

@@ -14,6 +14,7 @@ import com.offers_rn.offers.GradFragment;
 import com.offers_rn.offers.InternFragment;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -119,6 +120,9 @@ public class FragmentMajor extends Fragment implements OnTabChangeListener,OnPag
 			tabHost.addTab(tabSpec);
 			TextView x = (TextView) tabHost.getTabWidget().getChildAt(i-1).findViewById(android.R.id.title);
 		    x.setTextSize(11);
+
+		    Typeface myTypeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/proxima-nova-soft-light-webfont.ttf");
+            x.setTypeface(myTypeface);
 		    
 		}
 		

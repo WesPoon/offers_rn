@@ -8,30 +8,30 @@ package com.shamanland.facebook.likebutton;
 
 public final class R {
 	public static final class attr {
-		public static final int appId = 0x7f0100dc;
-		public static final int boxCornersRadius = 0x7f0100d4;
-		public static final int boxFillColor = 0x7f0100d1;
-		public static final int boxId = 0x7f0100e8;
-		public static final int boxStrokeColor = 0x7f0100d2;
-		public static final int boxStrokeWidth = 0x7f0100d3;
-		public static final int calloutMarker = 0x7f0100d5;
-		public static final int contentViewId = 0x7f0100dd;
-		public static final int likeId = 0x7f0100e7;
-		public static final int optAction = 0x7f0100e4;
-		public static final int optLayout = 0x7f0100e3;
-		public static final int optPictureAttrs = 0x7f0100e2;
-		public static final int optShare = 0x7f0100e6;
-		public static final int optShowFaces = 0x7f0100e5;
-		public static final int optTextClose = 0x7f0100e1;
-		public static final int optTextOpen = 0x7f0100e0;
-		public static final int optTitleClose = 0x7f0100df;
-		public static final int optTitleOpen = 0x7f0100de;
-		public static final int pagePicture = 0x7f0100d9;
-		public static final int pagePictureId = 0x7f0100da;
-		public static final int pagePictureUrl = 0x7f0100db;
-		public static final int pageText = 0x7f0100d8;
-		public static final int pageTitle = 0x7f0100d7;
-		public static final int pageUrl = 0x7f0100d6;
+		public static final int appId = 0x7f0100df;
+		public static final int boxCornersRadius = 0x7f0100d7;
+		public static final int boxFillColor = 0x7f0100d4;
+		public static final int boxId = 0x7f0100eb;
+		public static final int boxStrokeColor = 0x7f0100d5;
+		public static final int boxStrokeWidth = 0x7f0100d6;
+		public static final int calloutMarker = 0x7f0100d8;
+		public static final int contentViewId = 0x7f0100e0;
+		public static final int likeId = 0x7f0100ea;
+		public static final int optAction = 0x7f0100e7;
+		public static final int optLayout = 0x7f0100e6;
+		public static final int optPictureAttrs = 0x7f0100e5;
+		public static final int optShare = 0x7f0100e9;
+		public static final int optShowFaces = 0x7f0100e8;
+		public static final int optTextClose = 0x7f0100e4;
+		public static final int optTextOpen = 0x7f0100e3;
+		public static final int optTitleClose = 0x7f0100e2;
+		public static final int optTitleOpen = 0x7f0100e1;
+		public static final int pagePicture = 0x7f0100dc;
+		public static final int pagePictureId = 0x7f0100dd;
+		public static final int pagePictureUrl = 0x7f0100de;
+		public static final int pageText = 0x7f0100db;
+		public static final int pageTitle = 0x7f0100da;
+		public static final int pageUrl = 0x7f0100d9;
 	}
 	public static final class color {
 		public static final int com_shamanland_facebook_button_blue_focused_end = 0x7f0d00a4;
@@ -88,30 +88,30 @@ public final class R {
 		public static final int top = 0x7f0e002b;
 	}
 	public static final class layout {
-		public static final int com_shamanland_facebook_like_activity_progress = 0x7f04001b;
+		public static final int com_shamanland_facebook_like_activity_progress = 0x7f04001c;
 	}
 	public static final class string {
-		public static final int com_shamanland_facebook = 0x7f070031;
-		public static final int com_shamanland_facebook_like_activity_error = 0x7f070032;
-		public static final int com_shamanland_facebook_like_box_text_default = 0x7f070033;
-		public static final int com_shamanland_like = 0x7f070034;
-		public static final int com_shamanland_recommend = 0x7f070035;
-		public static final int com_shamanland_share = 0x7f070036;
+		public static final int com_shamanland_facebook = 0x7f070038;
+		public static final int com_shamanland_facebook_like_activity_error = 0x7f070039;
+		public static final int com_shamanland_facebook_like_box_text_default = 0x7f07003a;
+		public static final int com_shamanland_like = 0x7f07003b;
+		public static final int com_shamanland_recommend = 0x7f07003c;
+		public static final int com_shamanland_share = 0x7f07003d;
 	}
 	public static final class style {
 		public static final int Theme_Facebook_Like = 0x7f0a0122;
-		public static final int Widget_FacebookLikeBox = 0x7f0a017c;
+		public static final int Widget_FacebookLikeBox = 0x7f0a017d;
 		public static final int Widget_FacebookLikeButton = 0x7f0a0001;
-		public static final int Widget_FacebookLikeButtonBase = 0x7f0a017d;
+		public static final int Widget_FacebookLikeButtonBase = 0x7f0a017e;
 	}
 	public static final class styleable {
-		public static final int[] FacebookLikeBox = { 0x7f0100d1, 0x7f0100d2, 0x7f0100d3, 0x7f0100d4, 0x7f0100d5 };
+		public static final int[] FacebookLikeBox = { 0x7f0100d4, 0x7f0100d5, 0x7f0100d6, 0x7f0100d7, 0x7f0100d8 };
 		public static final int FacebookLikeBox_boxCornersRadius = 3;
 		public static final int FacebookLikeBox_boxFillColor = 0;
 		public static final int FacebookLikeBox_boxStrokeColor = 1;
 		public static final int FacebookLikeBox_boxStrokeWidth = 2;
 		public static final int FacebookLikeBox_calloutMarker = 4;
-		public static final int[] FacebookLikeButton = { 0x7f0100d6, 0x7f0100d7, 0x7f0100d8, 0x7f0100d9, 0x7f0100da, 0x7f0100db, 0x7f0100dc, 0x7f0100dd, 0x7f0100de, 0x7f0100df, 0x7f0100e0, 0x7f0100e1, 0x7f0100e2, 0x7f0100e3, 0x7f0100e4, 0x7f0100e5, 0x7f0100e6 };
+		public static final int[] FacebookLikeButton = { 0x7f0100d9, 0x7f0100da, 0x7f0100db, 0x7f0100dc, 0x7f0100dd, 0x7f0100de, 0x7f0100df, 0x7f0100e0, 0x7f0100e1, 0x7f0100e2, 0x7f0100e3, 0x7f0100e4, 0x7f0100e5, 0x7f0100e6, 0x7f0100e7, 0x7f0100e8, 0x7f0100e9 };
 		public static final int FacebookLikeButton_appId = 6;
 		public static final int FacebookLikeButton_contentViewId = 7;
 		public static final int FacebookLikeButton_optAction = 14;
@@ -129,7 +129,7 @@ public final class R {
 		public static final int FacebookLikeButton_pageText = 2;
 		public static final int FacebookLikeButton_pageTitle = 1;
 		public static final int FacebookLikeButton_pageUrl = 0;
-		public static final int[] FacebookLikePlugin = { 0x7f0100e7, 0x7f0100e8 };
+		public static final int[] FacebookLikePlugin = { 0x7f0100ea, 0x7f0100eb };
 		public static final int FacebookLikePlugin_boxId = 1;
 		public static final int FacebookLikePlugin_likeId = 0;
 	}

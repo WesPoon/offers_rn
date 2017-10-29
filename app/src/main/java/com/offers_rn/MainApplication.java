@@ -13,6 +13,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.google.android.gms.ads.MobileAds;
+import com.offers_rn.parseobject.GT;
+import com.offers_rn.parseobject.MT;
 import com.parse.Parse;
 import com.parse.ParseInstallation;
 import com.parse.ParseObject;
@@ -30,6 +33,7 @@ import com.offers_rn.parseobject.Mentorship;
 import com.offers_rn.parseobject.RubbishJobs;
 import com.offers_rn.parseobject.Scholar;
 import com.offers_rn.parseobject.Workshop;
+import com.offers_rn.parseobject.SummerTrip;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -68,6 +72,8 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate(){
 
     super.onCreate();
+
+    MobileAds.initialize(getApplicationContext(), "ca-app-pub-2233864871659362~1708118710");
     mydb=new DBHelper(this);
     //    blacklistdb=new DBHelper(this);
 
@@ -86,8 +92,10 @@ public class MainApplication extends Application implements ReactApplication {
     ParseObject.registerSubclass(Gossip.class);
     ParseObject.registerSubclass(Mentorship.class);
     ParseObject.registerSubclass(Workshop.class);
-    ParseObject.registerSubclass(Scholar.class);
+    ParseObject.registerSubclass(SummerTrip.class);
     ParseObject.registerSubclass(RubbishJobs.class);
+    ParseObject.registerSubclass(MT.class);
+    ParseObject.registerSubclass(GT.class);
 
     ParseObject.registerSubclass(Message.class);
     //Parse.initialize(this, getString(R.string.parse_app_id), getString(R.string.parse_client_id));

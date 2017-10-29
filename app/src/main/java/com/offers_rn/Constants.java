@@ -20,5 +20,7 @@ public class Constants {
 	public static final String summertrip = "SummerTrip";
 	public static final String MT = "MT";
 	public static final String GT = "GT";
+	public static final String Admob_ID = "ca-app-pub-2233864871659362~1708118710";
+
 	
 }

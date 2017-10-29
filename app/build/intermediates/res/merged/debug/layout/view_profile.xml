@@ -28,11 +28,11 @@
 
         <ImageView
             android:id="@+id/viewProfile_uIcon"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/ic_launcher" />
+            android:src="@mipmap/ic_squeak" />
 
         <TextView
             android:id="@+id/viewProfile_university"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:text="University"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="15dp"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </LinearLayout>
@@ -57,11 +57,12 @@
      android:layout_height="60dp"
      android:layout_marginTop="5dp"
      android:layout_marginLeft="5dp"
-     android:src="@drawable/ic_launcher"/>
+     android:src="@mipmap/ic_squeak"/>
 
      <LinearLayout
          android:layout_width="wrap_content"
-         android:layout_height="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="5dp"
          android:orientation="vertical" >
 
          <TextView
@@ -69,7 +70,7 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="User Name"
-             android:layout_marginLeft="4dp"  
+             android:layout_marginLeft="14dp"
              android:textAppearance="?android:attr/textAppearanceLarge" />
 
          <TextView
@@ -77,14 +78,14 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:layout_marginTop="1dp"             
-             android:layout_marginLeft="8dp"   
+             android:layout_marginLeft="14dp"
              android:text="Major" />
 
          <TextView
              android:id="@+id/viewProfile_gpa"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:layout_marginLeft="8dp"
+             android:layout_marginLeft="14dp"
              android:text="GPA"           
              android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -94,6 +95,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content" >
 
         <TextView
@@ -116,6 +118,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
         android:layout_height="wrap_content" >
 
         <TextView
@@ -138,6 +141,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
         android:layout_height="wrap_content" >
 
         <TextView

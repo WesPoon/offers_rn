@@ -53,7 +53,11 @@ public class ChoosePage1 extends Activity implements OnClickListener{
 	@Override
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
+
+
 		username = et1.getText().toString();
+
+
 		if(username != null){
 			
 			if(ParseUser.getCurrentUser()==null){

@@ -154,8 +154,9 @@ dependencies {
     compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'com.github.bhargavms:DotLoader:1.0.0'
     compile 'com.veinhorn.scrollgalleryview:library:1.0.5'
+    compile 'com.google.android.gms:play-services-ads:11.2.0'
     compile project(":lib")
-    compile "com.facebook.react:react-native:+"  // From node_modules
+    compile "com.facebook.react:react-native:0.29.2"  // From node_modules
 
 }
 

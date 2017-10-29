@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.ContextMenu;
@@ -29,6 +30,7 @@ public class ViewProfile extends Activity implements OnClickListener{
 	ImageView uIcon, userIcon;
 	TextView uni, username, major, gpa, industry1, industry2, careerStyle;
 	Button btn1;
+	String profilePicUrl;
 	@SuppressLint("NewApi") @Override
 	public void onCreate(Bundle savedInstanceState,
 			PersistableBundle persistentState) {
@@ -43,7 +45,15 @@ public class ViewProfile extends Activity implements OnClickListener{
 	}
 	
 	public void init(){
+
+
+
+
 		setContentView(R.layout.view_profile);
+
+
+		Typeface tinderFont = Typeface.createFromAsset(getAssets(),"fonts/proxima-nova-soft-light-webfont.ttf");
+
 		btn1 = (Button) findViewById(R.id.viewProfile_reset_btn);
 		btn1.setOnClickListener(this);
 		uIcon = (ImageView) findViewById(R.id.viewProfile_uIcon);
@@ -56,15 +66,24 @@ public class ViewProfile extends Activity implements OnClickListener{
 		industry2 = (TextView) findViewById(R.id.viewProfile_industry2);
 		careerStyle = (TextView) findViewById(R.id.viewProfile_careerStyle);
 		SharedPreferences settings = getSharedPreferences(this.getApplicationContext().getString(R.string.app_name), 0);
+
+		this.profilePicUrl = settings.getString("profile_pic_url","/");
+
 		uni.setText(settings.getString("university","/"));
+		uni.setTypeface(tinderFont);
 		setUIcon(settings.getString("university","/"));
 		username.setText(settings.getString("username","/"));
+		username.setTypeface(tinderFont);
 		setUserIcon(settings.getString("username","/"));
 		major.setText(settings.getString("major","/"));
+		major.setTypeface(tinderFont);
 		gpa.setText(convertGPA(settings.getInt("gpa",-1)));
 		industry1.setText(settings.getString("industry1","/"));
+		industry1.setTypeface(tinderFont);
 		industry2.setText(settings.getString("industry2","/"));
+		industry2.setTypeface(tinderFont);
 		careerStyle.setText(convertCareerStyle(settings.getInt("career_style",-1)));
+		careerStyle.setTypeface(tinderFont);
 		
 		//hiding gpa
 		gpa.setVisibility(View.GONE);
@@ -102,8 +121,8 @@ public class ViewProfile extends Activity implements OnClickListener{
 	public void setUserIcon(String input){
 		Context messageContext = null;
 		Picasso.with(messageContext).
-        load("https://twitter.com/" + input + "/profile_image?size=original").
-        placeholder(R.drawable.ic_launcher).
+        load(profilePicUrl).
+        placeholder(R.mipmap.ic_squeak).
         into(userIcon);
 	}
 	

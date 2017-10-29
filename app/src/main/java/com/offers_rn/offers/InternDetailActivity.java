@@ -294,7 +294,7 @@ public class InternDetailActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(GossipFragment.newInstance(gossiplist), "Gossip");
         adapter.addFrag(JDFragment.newInstance(JD,this.Company,this.JobTitle, this.Deadline), "JD & Req");
-        adapter.addFrag(PrepareFragment.newInstance(), "Preparation");
+        adapter.addFrag(PrepareFragment.newInstance(), "Poster");
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(5);
         TabLayout tabLayout = (TabLayout)findViewById(R.id.detail_tab_layout);

@@ -41,16 +41,18 @@ import java.util.List;
  */
 public class ScollGallery extends ActionBarActivity {
     private static final ArrayList<String> images = new ArrayList<>(Arrays.asList(
-            "http://cdn.bulbagarden.net/upload/thumb/b/b1/151Mew.png/250px-151Mew.png",
-            "http://pldh.net/media/dreamworld/054.png",
-            "http://cdn.bulbagarden.net/upload/thumb/7/70/079Slowpoke.png/250px-079Slowpoke.png",
+
             "https://media.eventhubs.com/images/characters/ssb4/ryu.png",
             "https://media.eventhubs.com/images/characters/ssb4/sheik.png",
             "https://media.eventhubs.com/images/characters/ssb4/sonic.png",
             "https://media.eventhubs.com/images/characters/ssb4/toon_link.png",
             "https://media.eventhubs.com/images/characters/ssb4/villager.png",
             "https://media.eventhubs.com/images/characters/ssb4/pikachu.png",
-            "http://www.socialtalent.co/wp-content/uploads/blog-content/so-logo.png"
+            "https://twt-thumbs.washtimes.com/media/image/2015/08/08/58888ce53f4a63237e0f6a7067004816_c0-0-3964-2311_s885x516.jpg?77ac8e0073a3ccb248a507de545528ea1652665f",
+            "https://b-i.forbesimg.com/naazneenkarmali/files/2013/09/400x31.jpg",
+            "https://vignette.wikia.nocookie.net/evchk/images/3/33/7915650_980x1200_0.jpg/revision/latest?cb=20151213093609",
+            "https://fortunedotcom.files.wordpress.com/2017/05/gettyimages-683157516.jpg?w=720&quality=85",
+            "http://ntdimg.com/pic/2014/10-8/p5440711a776821217.jpg"
             ));
 
     private NewScrollGalleryView newScrollGalleryView;
@@ -81,27 +83,11 @@ public class ScollGallery extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-
+                Toast.makeText(v.getContext(),"TEST-1",Toast.LENGTH_SHORT).show();
                 uploadProfilePic();
-   /*             String profile_pic_url = ((PicassoImageLoader)infos.get(newScrollGalleryView.getViewPager().getCurrentItem()).getLoader()).getURL();
-                if(profile_pic_url==null) {
-                    Toast.makeText(v.getContext(), "test null", Toast.LENGTH_LONG).show();
-                }
-                else{
-
-                    SharedPreferences settings = getSharedPreferences(getApplicationContext().getString(R.string.app_name), 0);
-                    SharedPreferences.Editor PE = settings.edit();
-                    PE.putString("profile_pic_url", profile_pic_url);
-                    PE.commit();
-                    SQLiteDatabase mydatabase = openOrCreateDatabase("UserDB",MODE_PRIVATE,null);
-                    Intent intent = new Intent(v.getContext(), SplashScreen.class);
-                    startActivity(intent);
-                } */
-            }
-
-            public void gotoNext(View v){
 
             }
+
         });
 
         newScrollGalleryView
@@ -164,31 +150,31 @@ public class ScollGallery extends ActionBarActivity {
             });
         }
         else{
-
-            final String profile_pic_url = ((PicassoImageLoader)infos.get(newScrollGalleryView.getViewPager().getCurrentItem()).getLoader()).getURL();
+            
+            final String profile_pic_url;
+            profile_pic_url = ((PicassoImageLoader)infos.get(newScrollGalleryView.getViewPager().getCurrentItem()).getLoader()).getURL();
             user = ParseUser.getCurrentUser();
-            user.setUsername(username);
             user.put("profile_pic",profile_pic_url);
             user.saveInBackground(new SaveCallback(){
 
                 @Override
-                public void done(ParseException arg0) {
+                public void done(ParseException e) {
                     // TODO Auto-generated method stub
-                    if(arg0==null){
+                    if(e==null){
 
-
+                        Toast.makeText(getApplicationContext(),"TEST-3",Toast.LENGTH_SHORT).show();
                         if(profile_pic_url==null) {
-
+                            Toast.makeText(getApplicationContext(),"TEST-4",Toast.LENGTH_SHORT).show();
                         }
                         else{
-
+                            Toast.makeText(getApplicationContext(),"TEST-5",Toast.LENGTH_SHORT).show();
                             SharedPreferences settings = getSharedPreferences(getApplicationContext().getString(R.string.app_name), 0);
                             SharedPreferences.Editor PE = settings.edit();
                             PE.putString("profile_pic_url", profile_pic_url);
                             PE.commit();
                             SQLiteDatabase mydatabase = openOrCreateDatabase("UserDB",MODE_PRIVATE,null);
-                            Intent intent = new Intent(getApplicationContext(), SplashScreen.class);
-                            startActivity(intent);
+                            finish();
+                            System.gc();
                         }
 
                     }
@@ -204,7 +190,13 @@ public class ScollGallery extends ActionBarActivity {
 
 
 
-
     }
+
+    @Override
+    protected void onDestroy() {
+        // TODO Auto-generated method stub
+        super.onDestroy();
+    }
+
 }
 

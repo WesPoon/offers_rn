@@ -8,6 +8,7 @@ import java.util.List;
 
 import android.util.Log;
 
+import com.offers_rn.parseobject.SummerTrip;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
@@ -49,6 +50,7 @@ public class Singleton {
     private List<RubbishJobs> normal_list = new ArrayList<RubbishJobs>();
 	private List<MT> MT_list = new ArrayList<MT>();
 	private List<GT> GT_list = new ArrayList<GT>();
+	private List<SummerTrip> summer_list = new ArrayList<SummerTrip>();
 
     
     public int getInternListCount(){
@@ -126,19 +128,16 @@ public class Singleton {
     		case Constants.gradjob:
 		     	return (List<Jobs>)(Object)GradJobslist;
 		     
-    		case "Competition":
+    		case Constants.competition:
     		 	return (List<Jobs>)(Object)Comp_list;
-    		 
-    		case "Workshop":
-    		 	return (List<Jobs>)(Object)Govern_list;
     		
-    		case "Govern":
+    		case Constants.workshop:
     		 	return (List<Jobs>)(Object)Workshop_list;
     		
     		case "Scholar":
     		 	return (List<Jobs>)(Object)Scholar_list;
     		
-    		case "Mentorship":
+    		case Constants.mentorship:
     		 	return (List<Jobs>)(Object)Mentor_list;
     		
     		case "Normal":
@@ -155,6 +154,9 @@ public class Singleton {
 
 			case Constants.GT:
 				return (List<Jobs>)(Object)GT_list;
+
+			case Constants.summertrip:
+				return (List<Jobs>)(Object)summer_list;
     		 
     	default :
     		return null;
@@ -231,8 +233,7 @@ public class Singleton {
 
         query.include("Company_Symbol");
         Calendar c = Calendar.getInstance(); 
- //       query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
- //       query.whereEqualTo("Description", "Elite");
+        query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
         query.findInBackground(new FindCallback<Jobs>() {
           @Override
           public void done(List<Jobs> list, ParseException e) {
@@ -289,8 +290,8 @@ public class Singleton {
 		 ParseQuery<Exchange> query = ParseQuery.getQuery("Exchange");
 		 
 	     query.setCachePolicy(ParseQuery.CachePolicy.NETWORK_ELSE_CACHE);
-        query.include("Company_Symbol");
-        query.findInBackground(new FindCallback<Exchange>() {
+         query.include("Company_Symbol");
+         query.findInBackground(new FindCallback<Exchange>() {
         @Override
         public void done(List<Exchange> list, ParseException e) {
         	
@@ -321,7 +322,6 @@ public class Singleton {
             	//https://www.parse.com/docs/android/guide#objects-relational-data
            
 					newJob.duplicateFrom(tempjob);
-//					((MainApplication)SplashScreen.this.getApplication()).addExchange(tempjob);
 					Singleton.getInstance().addExchange(tempjob);
                 
             }
@@ -349,7 +349,7 @@ public class Singleton {
 		query.setCachePolicy(ParseQuery.CachePolicy.NETWORK_ELSE_CACHE);
 		query.include("Company_Symbol");
 		Calendar c = Calendar.getInstance();
-//       query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
+        query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
 		query.findInBackground(new FindCallback<GradJobs>() {
 			@Override
 			public void done(List<GradJobs> list, ParseException e) {
@@ -381,7 +381,6 @@ public class Singleton {
 						//https://www.parse.com/docs/android/guide#objects-relational-data
 
 						newJob.duplicateFrom(tempjob);
-//					((MainApplication)SplashScreen.this.getApplication()).addGrad(tempjob);
 						Singleton.getInstance().addGrad(tempjob);
 
 
@@ -409,7 +408,7 @@ public class Singleton {
 		query.setCachePolicy(ParseQuery.CachePolicy.NETWORK_ELSE_CACHE);
 		query.include("Company_Symbol");
 		Calendar c = Calendar.getInstance();
-//       query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
+        query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
 		query.findInBackground(new FindCallback<MT>() {
 			@Override
 			public void done(List<MT> list, ParseException e) {
@@ -441,7 +440,6 @@ public class Singleton {
 						//https://www.parse.com/docs/android/guide#objects-relational-data
 
 						newJob.duplicateFrom(tempjob);
-//					((MainApplication)SplashScreen.this.getApplication()).addGrad(tempjob);
 						Singleton.getInstance().addMT(tempjob);
 
 
@@ -469,7 +467,7 @@ public class Singleton {
 		query.setCachePolicy(ParseQuery.CachePolicy.NETWORK_ELSE_CACHE);
 		query.include("Company_Symbol");
 		Calendar c = Calendar.getInstance();
-//       query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
+       query.whereGreaterThanOrEqualTo("Deadline",c.getTime());
 		query.findInBackground(new FindCallback<GT>() {
 			@Override
 			public void done(List<GT> list, ParseException e) {
@@ -501,7 +499,6 @@ public class Singleton {
 						//https://www.parse.com/docs/android/guide#objects-relational-data
 
 						newJob.duplicateFrom(tempjob);
-//					((MainApplication)SplashScreen.this.getApplication()).addGrad(tempjob);
 						Singleton.getInstance().addGT(tempjob);
 
 

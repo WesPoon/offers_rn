@@ -11,6 +11,7 @@ public class Message extends ParseObject implements java.io.Serializable {
     public long time;
     public int livelikecount;
     public boolean selected = false;
+    public String profile_pic_url;
     
     public void setTextContent(String text){
     	this.text = text;
@@ -50,6 +51,21 @@ public class Message extends ParseObject implements java.io.Serializable {
     	this.livelikecount = temp;
     }
     
+    public String getProfilePicUrl(){
+
+        if(this.profile_pic_url==null){
+            return getString("profile_pic");
+        }
+        else{
+            return this.profile_pic_url;
+        }
+        
+    }
+
+    public void setProfilePicUrl(String temp){
+        this.profile_pic_url = temp;
+    }
+
     public void setSelected(boolean choice){
     	this.selected = choice;
     }

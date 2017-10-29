@@ -41,6 +41,7 @@ public class CommonFragment extends Fragment{
 		CommonFragment fragment = new CommonFragment();
 		Bundle args = new Bundle();
 		args.putString("type", type);
+		
 		fragment.setArguments(args);
 		return fragment;
 	}
@@ -63,8 +64,11 @@ public class CommonFragment extends Fragment{
 		rootView = inflater.inflate(R.layout.offer_recyclerview, container, false);
 	//	mLoadingSub = (ProgressBar) rootView.findViewById(R.id.loadingSpinner);
 	//	mLoadingSub.setVisibility(View.VISIBLE);
-		createList();
-//		mLoadingSub.setVisibility(View.GONE);
+
+
+			createList();
+
+//	}	mLoadingSub.setVisibility(View.GONE);
 		return rootView;
 		
 		
@@ -82,8 +86,11 @@ public class CommonFragment extends Fragment{
 		llm.setOrientation(LinearLayoutManager.VERTICAL);
 		recList.setLayoutManager(llm);      
     //    ContactAdapter ca = new ContactAdapter(this.type,((MainApplication) this.getActivity().getApplication()).getList(this.type));
+//		if (Singleton.getInstance().getList(this.type).size() == 0){
 		ContactAdapter ca = new ContactAdapter(this.type,Singleton.getInstance().getList(this.type));
-        recList.setAdapter(ca);
+		recList.setAdapter(ca);
+//		}
+
         recList.setOnScrollListener(new OnScrollListener(){
         	
         	@Override
