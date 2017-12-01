@@ -12,12 +12,12 @@
         "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\profile_choose_page2.xml",
-        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\layout\\profile_choose_page2.xml"
-    },
-    {
         "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\offer_card.xml",
         "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\layout\\offer_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\profile_choose_page2.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\layout\\profile_choose_page2.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\floating_action_button.xml",
@@ -348,11 +348,11 @@
         "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\layout\\tabs_viewpager.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_screen_content_include.xml"
-    },
-    {
         "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\admob_1.xml",
         "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\src\\main\\res\\layout\\admob_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\user\\Desktop\\offers_rn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.2.0\\res\\layout\\abc_screen_content_include.xml"
     }
 ]

@@ -1,0 +1,698 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"prof",
+				"profile_pic_url"
+			],
+			[
+				"profile",
+				"profile_pic_url"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "package com.offers_rn.nav;\n\nimport java.util.List;\nimport java.util.Vector;\n\nimport com.offers_rn.Constants;\n\n\nimport com.offers_rn.MainApplication;\nimport com.offers_rn.R;\nimport com.offers_rn.Singleton;\nimport com.offers_rn.offers.ExchangeFragment;\nimport com.offers_rn.offers.GradFragment;\nimport com.offers_rn.offers.InternFragment;\n\nimport android.content.Context;\nimport android.os.Bundle;\nimport android.support.annotation.Nullable;\nimport android.support.v4.app.Fragment;\nimport android.support.v4.app.FragmentTabHost;\nimport android.support.v4.view.ViewPager;\nimport android.support.v4.view.ViewPager.OnPageChangeListener;\nimport android.support.v7.app.ActionBar;\nimport android.util.Log;\nimport android.view.LayoutInflater;\nimport android.view.View;\nimport android.view.ViewGroup;\nimport android.widget.HorizontalScrollView;\nimport android.widget.ProgressBar;\nimport android.widget.TabHost;\nimport android.widget.TabHost.OnTabChangeListener;\nimport android.widget.TabHost.TabContentFactory;\nimport android.widget.TextView;\nimport android.widget.Toast;\n\npublic class FragmentMajor extends Fragment implements OnTabChangeListener,OnPageChangeListener{\n	\n	\n	private TabHost tabHost;\n	private ViewPager viewPager;\n	private MyFragmentPagerAdapter myViewPagerAdapter;\n	private String[] tabname = {\"MT\", \"GT\"};\n	int i = 0;\n	View v;\n	public static ActionBar actionBar;\n	\n	public ProgressBar mLoadingSub;\n	\n	\n	public static FragmentMajor newInstance(ActionBar MainActionBar) {\n		actionBar = MainActionBar;\n		FragmentMajor fragment = new FragmentMajor();\n		Bundle args = new Bundle();\n		fragment.setArguments(args);\n		return fragment;\n	}\n	\n	public FragmentMajor(){\n		\n	}\n	\n	@Override\n	public void onCreate(Bundle savedInstanceState) {\n		// TODO Auto-generated method stub\n		super.onCreate(savedInstanceState);\n		setRetainInstance(true);\n		Log.v(\"MajorFragment\",\"OnCreate\");\n	}\n	\n\n	@Override\n	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,\n			@Nullable Bundle savedInstanceState) {\n		// TODO Auto-generated method stub\n		\n		\n		v = inflater.inflate(R.layout.tabs_viewpager, container, false);\n		\n		// We put TabHostView Pager here:\n		i++;\n		this.initializeTabHost(savedInstanceState);\n		this.initializeViewPager();\n		return v;\n	}\n	\n	// fake content for tabhost\n		class FakeContent implements TabContentFactory {\n			private final Context mContext;\n\n			public FakeContent(Context context) {\n				mContext = context;\n			}\n\n			@Override\n			public View createTabContent(String tag) {\n				View v = new View(mContext);\n				v.setMinimumHeight(0);\n				v.setMinimumWidth(0);\n				return v;\n			}\n		}\n	\n\n	private void initializeTabHost(Bundle args) {\n		\n\n\n		tabHost = (TabHost) v.findViewById(android.R.id.tabhost);\n		\n\n		tabHost.setup();\n\n		for (int i = 1; i <= 2; i++) {\n\n			TabHost.TabSpec tabSpec;\n			tabSpec = tabHost.newTabSpec(\"Tab\" + i);\n			tabSpec.setIndicator(tabname[i-1]);\n			tabSpec.setContent(new FakeContent(getActivity()));\n			tabHost.addTab(tabSpec);\n			TextView x = (TextView) tabHost.getTabWidget().getChildAt(i-1).findViewById(android.R.id.title);\n		    x.setTextSize(11);\n\n		    Typeface myTypeface = Typeface.createFromAsset(getAssets(), \"fonts/proxima-nova-soft-light-webfont.ttf\");\n            x.setTypeface(myTypeface);\n		    \n		}\n		\n		\n	    \n		tabHost.setOnTabChangedListener(this);\n	}\n	\n	@SuppressWarnings(\"deprecation\")\n	private void initializeViewPager() {\n		List<Fragment> fragments = new Vector<Fragment>();\n		\n		fragments.add(CommonFragment.newInstance(actionBar,Constants.MT));\n		fragments.add(CommonFragment.newInstance(actionBar,Constants.GT));\n\n\n		this.myViewPagerAdapter = new MyFragmentPagerAdapter(getChildFragmentManager(), fragments);		\n		this.viewPager = (ViewPager) v.findViewById(R.id.tab_viewPager);\n		this.viewPager.setAdapter(this.myViewPagerAdapter);\n		this.viewPager.setOffscreenPageLimit(2);\n		this.viewPager.setOnPageChangeListener(this);\n\n	}\n\n\n	@Override\n	public void onDestroy() {\n		// TODO Auto-generated method stub\n		Log.d(\"MajorFragment\",\"Destroy\");\n		super.onDestroy();\n\n	}\n\n	@Override\n	public void onDestroyView() {\n		// TODO Auto-generated method stub\n		\n		Log.d(\"MajorFragment\",\"DestroyView\");\n		super.onDestroyView();\n	}\n\n	@Override\n	public void onPause() {\n		// TODO Auto-generated method stub\n		super.onPause();\n	}\n\n	@Override\n	public void onResume() {\n		// TODO Auto-generated method stub\n		super.onResume();\n		Toast.makeText(getActivity(),\"Fragment Major Resume\",Toast.LENGTH_LONG).show();\n	//	if(Singleton.getInstance().getInternListCount()==0){\n	//		mLoadingSub = (ProgressBar) v.findViewById(R.id.loadingSpinner);\n	//		mLoadingSub.setVisibility(View.VISIBLE);\n			\n	//	}\n		\n//		Toast.makeText(getActivity(), \"Grad list number NOW: \"+Integer.toString(MainApplication.GradJobslist.size()), Toast.LENGTH_LONG).show();\n		\n	}\n\n	@Override\n	public void onPageScrollStateChanged(int arg0) {\n		// TODO Auto-generated method stub\n		\n	}\n\n	@Override\n	public void onPageScrolled(int arg0, float arg1, int arg2) {\n		// TODO Auto-generated method stub\n		\n	}\n\n	@Override\n	public void onPageSelected(int position) {\n		// TODO Auto-generated method stub\n		\n		this.tabHost.setCurrentTab(position);\n		\n	}\n\n	@Override\n	public void onTabChanged(String arg0) {\n		// TODO Auto-generated method stub\n		int pos = this.tabHost.getCurrentTab();\n		this.viewPager.setCurrentItem(pos);\n\n		HorizontalScrollView hScrollView = (HorizontalScrollView) v\n				.findViewById(R.id.hScrollView);\n		View tabView = tabHost.getCurrentTabView();\n		int scrollPos = tabView.getLeft()\n				- (hScrollView.getWidth() - tabView.getWidth()) / 2;\n		hScrollView.smoothScrollTo(scrollPos, 0);\n	}\n	\n\n}\n",
+			"file": "app/src/main/java/com/offers_rn/nav/FragmentMajor.java",
+			"file_size": 5846,
+			"file_write_time": 131537347402821755,
+			"settings":
+			{
+				"buffer_size": 5632,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/main/assets/fonts/proxima-nova-soft-light-webfont.ttf",
+			"settings":
+			{
+				"buffer_size": 149150,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/src/main/java/com/offers_rn/MainActivity.java",
+			"settings":
+			{
+				"buffer_size": 17767,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/src/main/java/com/offers_rn/nav/FragmentMinor.java",
+			"settings":
+			{
+				"buffer_size": 6153,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/main/java/com/offers_rn/profile/Profile.java",
+			"settings":
+			{
+				"buffer_size": 3451,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/main/java/com/offers_rn/profile/ViewProfile.java",
+			"settings":
+			{
+				"buffer_size": 4710,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/main/java/com/offers_rn/nav/CommonFragment.java",
+			"settings":
+			{
+				"buffer_size": 3519,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/main/java/com/offers_rn/nav/FragmentThird.java",
+			"settings":
+			{
+				"buffer_size": 6150,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/main/java/com/offers_rn/chatroom/Chatroom.java",
+			"settings":
+			{
+				"buffer_size": 10116,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/main/java/com/offers_rn/chatroom/MessageAdapter.java",
+			"settings":
+			{
+				"buffer_size": 7778,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/main/java/com/offers_rn/chatroom/Message.java",
+			"settings":
+			{
+				"buffer_size": 1563,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/src/main/java/com/offers_rn/Constants.java",
+			"settings":
+			{
+				"buffer_size": 988,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/user/Desktop/offers_rn/android",
+		"/C/Users/user/Desktop/offers_rn/android/app",
+		"/C/Users/user/Desktop/offers_rn/android/app/src",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/assets",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/assets/fonts",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/chatroom",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/res/menu",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/res/values"
+	],
+	"file_history":
+	[
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/profile/ScollGallery.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/profile/ChoosePage2.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/profile/ChoosePage1.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/profile/ChooseProfilePic.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/MainFragment.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/Singleton.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/nav/CommonFragment.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/profile/ViewProfile.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/service/BootUpReceiver.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/service/NetworkChangeReceiver.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/service/OfferService.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/detail/PrepareFragment.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/offers/InternDetailLayout.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/offers/InternDetailActivity.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/nav/FragmentMinor.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/nav/FragmentMajor.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/res/values/strings.xml",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/res/menu/main.xml",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/MainActivity.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/profile/Profile.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/profile/PicassoImageLoader.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/profile/NewScrollGalleryView.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/chatroom/Chatroom.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/chatroom/Message.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/MainActivity_RN.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/MainApplication.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/GoogleAdv.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/detail/GossipAdapter.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/res/layout/view_profile.xml",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/res/layout/admob_1.xml",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/profile/ChoosePage3.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/chatroom/MessageAdapter.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/build.gradle",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/java/com/offers_rn/profile/ChooseUniActivity.java",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/res/layout/profile_choose_page2.xml",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/res/layout/profile_choose_page3.xml",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/res/values/profile_major.xml",
+		"/C/Users/user/Desktop/offers_rn/android/app/src/main/res/values/profile_industry.xml",
+		"/C/Users/user/Desktop/Offers_v2/Offers_v2_20160115/Offers_v2/AndroidManifest.xml",
+		"/C/Users/user/Desktop/Offers_v2/Offers_v2_20160115/facebook-like-ui/res/values/styles.xml",
+		"/C/Users/user/Desktop/Offers_v2/Offers_v2_20160115/facebook-like-ui/res/layout/com_shamanland_facebook_like_activity_progress.xml",
+		"/C/Users/user/Desktop/Offers_v2/Offers_v2_20160115/facebook-like-ui/res/drawable/com_shamanland_facebook_button_blue.xml",
+		"/C/Users/user/Desktop/old/ContactAdapter.java",
+		"/C/Users/user/Desktop/old/InternDetailActivity.java",
+		"/C/Users/user/Desktop/Offers_v2/Offers_v2_20160115/facebook-like-ui/res/values/colors.xml",
+		"/C/Users/user/Desktop/Offers_v2/Offers_v2_20160115/Offers_v2/src/com/wesley/offers_v2/MainApplication.java",
+		"/C/Users/user/Desktop/Offers_v2/Offers_v2_20160115/facebook-like-ui/src/com/shamanland/facebook/likebutton/FacebookLikeButton.java",
+		"/C/Users/user/Desktop/wes/android/app/build.gradle",
+		"/C/Users/user/Desktop/wes/android/app/src/main/java/com/wes/MainActivity.java"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"FragmentMinor",
+			"setText",
+			"abname",
+			"abname ",
+			"tf",
+			"pd",
+			"JDQueryDone",
+			"profileUrl",
+			"viewPager",
+			"getloader",
+			"username",
+			"PicassoImageLoader",
+			"spn3",
+			"wesley.offers_v2"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"offers_rn"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 9,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/src/main/java/com/offers_rn/nav/FragmentMajor.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5632,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4654,
+								4654
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2082.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/src/main/assets/fonts/proxima-nova-soft-light-webfont.ttf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 149150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1879,
+								1879
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/src/main/java/com/offers_rn/MainActivity.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7091,
+								7091
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2577.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/src/main/java/com/offers_rn/nav/FragmentMinor.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								808,
+								808
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 675.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/src/main/java/com/offers_rn/profile/Profile.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								863,
+								863
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/src/main/java/com/offers_rn/profile/ViewProfile.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4710,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3183,
+								3183
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 885.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/src/main/java/com/offers_rn/nav/CommonFragment.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3519,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								877,
+								877
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/src/main/java/com/offers_rn/nav/FragmentThird.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6150,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3393,
+								3537
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1395.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/src/main/java/com/offers_rn/chatroom/Chatroom.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6288,
+								6288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1845.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/src/main/java/com/offers_rn/chatroom/MessageAdapter.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7778,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4651,
+								4651
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/src/main/java/com/offers_rn/chatroom/Message.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1563,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/src/main/java/com/offers_rn/Constants.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 988,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								691,
+								699
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Java/JavaC.sublime-build",
+	"project": "sublime_config.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 376.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
